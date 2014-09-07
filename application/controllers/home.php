@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Authentication extends CI_Controller {
+class Home extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,21 +20,10 @@ class Authentication extends CI_Controller {
 	public function index()
 	{
 
-		$this->load->helper('url');
-		$this->load->view('login');
+		$this->load->view('home');
 	}
 
-	public function login()
-	{
-
-		$this->load->view('index');
-	}
-
-	public function logon()
-	{
-
-		$this->load->view('login');
-	}
+	
 }
 
 /* End of file welcome.php */

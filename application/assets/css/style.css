@@ -1,4 +1,9 @@
 .centered {
-    margin: 0 auto !important;
-    float: none !important;
+	margin: 0 auto !important;
+	float: none !important;
+}
+body{
+	width: 98%;
+	margin: 0 auto !important;
+	float: none !important;
 }
