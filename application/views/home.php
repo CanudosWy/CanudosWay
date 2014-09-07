@@ -11,7 +11,7 @@
 <body>
 
 	<div class="page-header">
-		
+
 		<h1>Logo Canudo's Way <small>Aplicativo que possibilita você planejar o melhor caminho para concluir o seu curso na Faculdade Senac.</small></h1>
 	</div>
 
@@ -63,11 +63,11 @@
 	<div class="panel panel-default">
 		<div class="panel-body">
 
-
+		Conteúdo
 		</div>
 		<div class="panel-footer">
 			
-
+		Rodapé
 		</div>
 	</div>
 
