@@ -12,7 +12,7 @@
 
 	<div class="page-header">
 
-		<h1>Logo Canudo's Way <small>Aplicativo que ajuda você planejar o melhor caminho para concluir o seu curso na Faculdade Senac.</small></h1>
+		<h1>Logo Canudo's Way <small>Aplicativo que possibilita você planejar o melhor caminho para concluir o seu curso na Faculdade Senac.</small></h1>
 	</div>
 
 	<nav class="navbar navbar-default" role="navigation">
@@ -28,7 +28,7 @@
 			</div>   
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="#">Link</a></li>
+					<li><a href="<?=base_url()?>disciplina/novo">Cadastro Disciplina</a></li>
 					<li><a href="#">Link</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
@@ -53,6 +53,7 @@
 			</div>
 		</div>
 	</nav>
+
 	<ol class="breadcrumb">
 		<li><a href="#">Home</a></li>
 		<li><a href="#">Library</a></li>
@@ -61,8 +62,7 @@
 
 	<div class="panel panel-default">
 		<div class="panel-body">
-
-		Conteúdo
+			<?php $this->load->view($pagina);?>
 		</div>
 		<div class="panel-footer">
 			
