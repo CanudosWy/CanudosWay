@@ -12,7 +12,7 @@
 
 	<div class="page-header">
 
-		<h1>Logo Canudo's Way <small>Aplicativo que possibilita você planejar o melhor caminho para concluir o seu curso na Faculdade Senac.</small></h1>
+		<h1>Logo Canudo's Way <small>Aplicativo que ajuda você planejar o melhor caminho para concluir o seu curso na Faculdade Senac.</small></h1>
 	</div>
 
 	<nav class="navbar navbar-default" role="navigation">
@@ -53,7 +53,6 @@
 			</div>
 		</div>
 	</nav>
-
 	<ol class="breadcrumb">
 		<li><a href="#">Home</a></li>
 		<li><a href="#">Library</a></li>

@@ -18,9 +18,11 @@ class Home extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
-
-		$this->load->view('home');
+	{		
+		$this->load->model("AlunoModel", "", true);
+		$alunos = $this->AlunoModel->get_last_ten_alunos();
+		
+		$this->load->view('home', $alunos);
 	}
 
 	
