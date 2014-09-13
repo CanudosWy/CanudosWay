@@ -7,3 +7,28 @@ body{
 	margin: 0 auto !important;
 	float: none !important;
 }
+
+#sortable { 
+	margin: auto; 
+	width: 70%; 
+	list-style-type: none; 
+	padding: 0; 
+	width: 1000px; 
+}
+#sortable li { 
+	margin: 3px 3px 3px 0; 
+	padding: 1px; 
+	float: left; 
+	width: 150px; 
+	height: 120px; 
+	font-size: 11px; 
+	text-align: center; 
+	cursor: pointer;
+}
+.cadeiras li{
+	background: url('../img/cadeira.jpg') #F6F6F6 !important;
+	background-size: 80px 60px !important;
+	background-repeat: no-repeat !important;	
+    background-position: center !important;
+}
+

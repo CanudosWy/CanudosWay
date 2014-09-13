@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
 	<meta charset="utf-8">
 	<title>Canudo's Way - Login</title>
 	<link href="<?php echo base_url('application/assets/css/bootstrap.min.css');?>" rel="stylesheet" media="screen">
 	<link href="<?php echo base_url('application/assets/css/style.css');?>" rel="stylesheet" media="screen">
+	<link href="<?php echo base_url('application/assets/css/jquery-ui.min.css');?>" rel="stylesheet" media="screen">
 	<script src="<?php echo base_url('application/assets/js/jquery-2.1.1.min.js');?>" ></script>
 	<script src="<?php echo base_url('application/assets/js/bootstrap.min.js');?>" ></script>
+	<script src="<?php echo base_url('application/assets/js/jquery-ui.min.js');?>" ></script>
+	<script>
+		$(function() {
+			$( "#sortable" ).sortable();
+			$( "#sortable" ).disableSelection();
+		});		
+	</script>
 </head>
 <body>
 
@@ -43,12 +51,6 @@
 						</ul>
 					</li>
 				</ul>
-				<form class="navbar-form navbar-right" role="search">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Buscar">
-					</div>
-					<button type="submit" class="btn btn-default">Buscar</button>
-				</form>    
 				<button type="button" class="btn btn-primary navbar-btn">Sign in</button> 
 			</div>
 		</div>
@@ -62,15 +64,121 @@
 
 	<div class="panel panel-default">
 		<div class="panel-body">
-			<?php $this->load->view($pagina);?>
+			<div id="accordion">
+				<h3>1º Semestre - Grade Currícular</h3>
+				<div>
+					<ul id="sortable" class="cadeiras">
+						<li class="ui-state-default">Algoritmo de Programação</li>
+						<li class="ui-state-default">Laboratório de Programação</li>
+						<li class="ui-state-default">3</li>
+						<li class="ui-state-default">4</li>
+						<li class="ui-state-default">5</li>
+						<li class="ui-state-default">6</li>
+						<li class="ui-state-default">7</li>
+						<li class="ui-state-default">8</li>
+						<li class="ui-state-default">9</li>
+						<li class="ui-state-default">10</li>
+						<li class="ui-state-default">11</li>
+						<li class="ui-state-default">12</li>
+					</ul>
+				</div>
+				<h3>2º Semestre</h3>
+				<div>
+					<ul id="sortable">
+						<li class="ui-state-default">1</li>
+						<li class="ui-state-default">2</li>
+						<li class="ui-state-default">3</li>
+						<li class="ui-state-default">4</li>
+						<li class="ui-state-default">5</li>
+						<li class="ui-state-default">6</li>
+						<li class="ui-state-default">7</li>
+						<li class="ui-state-default">8</li>
+						<li class="ui-state-default">9</li>
+						<li class="ui-state-default">10</li>
+						<li class="ui-state-default">11</li>
+						<li class="ui-state-default">12</li>
+					</ul>
+				</div>
+				<h3>3º Semestre</h3>
+				<div>
+					<ul id="sortable">
+						<li class="ui-state-default">1</li>
+						<li class="ui-state-default">2</li>
+						<li class="ui-state-default">3</li>
+						<li class="ui-state-default">4</li>
+						<li class="ui-state-default">5</li>
+						<li class="ui-state-default">6</li>
+						<li class="ui-state-default">7</li>
+						<li class="ui-state-default">8</li>
+						<li class="ui-state-default">9</li>
+						<li class="ui-state-default">10</li>
+						<li class="ui-state-default">11</li>
+						<li class="ui-state-default">12</li>
+					</ul>
+				</div>
+				<h3>4º Semestre</h3>
+				<div>
+					<ul id="sortable">
+						<li class="ui-state-default">1</li>
+						<li class="ui-state-default">2</li>
+						<li class="ui-state-default">3</li>
+						<li class="ui-state-default">4</li>
+						<li class="ui-state-default">5</li>
+						<li class="ui-state-default">6</li>
+						<li class="ui-state-default">7</li>
+						<li class="ui-state-default">8</li>
+						<li class="ui-state-default">9</li>
+						<li class="ui-state-default">10</li>
+						<li class="ui-state-default">11</li>
+						<li class="ui-state-default">12</li>
+					</ul>
+				</div>
+				<h3>5º Semestre</h3>
+				<div>
+					<ul id="sortable">
+						<li class="ui-state-default">1</li>
+						<li class="ui-state-default">2</li>
+						<li class="ui-state-default">3</li>
+						<li class="ui-state-default">4</li>
+						<li class="ui-state-default">5</li>
+						<li class="ui-state-default">6</li>
+						<li class="ui-state-default">7</li>
+						<li class="ui-state-default">8</li>
+						<li class="ui-state-default">9</li>
+						<li class="ui-state-default">10</li>
+						<li class="ui-state-default">11</li>
+						<li class="ui-state-default">12</li>
+					</ul>
+				</div>
+				<h3>6º Semestre</h3>
+				<div>
+					<ul id="sortable">
+						<li class="ui-state-default">1</li>
+						<li class="ui-state-default">2</li>
+						<li class="ui-state-default">3</li>
+						<li class="ui-state-default">4</li>
+						<li class="ui-state-default">5</li>
+						<li class="ui-state-default">6</li>
+						<li class="ui-state-default">7</li>
+						<li class="ui-state-default">8</li>
+						<li class="ui-state-default">9</li>
+						<li class="ui-state-default">10</li>
+						<li class="ui-state-default">11</li>
+						<li class="ui-state-default">12</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 		<div class="panel-footer">
-			
-		Rodapé
+			Rodapé
 		</div>
 	</div>
 
 </body>
+<script>
+
+	$( "#accordion" ).accordion();
+</script>
 </html>
 
 
