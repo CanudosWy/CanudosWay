@@ -61,7 +61,7 @@ class MainController extends CI_Controller {
 		$this->data['dados']			=	$this->mainModel->lista($this->table);
 		$this->data['pagina']			=	$this->sessao.'/lista';	
 		
-		$this->load->view('home',$this->data);
+		$this->load->view('template',$this->data);
 		
 	}
 	
@@ -73,7 +73,7 @@ class MainController extends CI_Controller {
 		$this->data['acao']			=	'novo';
 		$this->data['pagina']			=	$this->sessao.'/novo';	
 		
-		$this->load->view('home',$this->data);
+		$this->load->view('template',$this->data);
 		
 	}
 	
