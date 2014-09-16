@@ -31,7 +31,7 @@
 					<li><a href="#">MENU</a></li>
 					<li><a href="#">MENU</a></li>
 				</ul>
-				<button type="button" class="btn btn-primary navbar-btn">Sign in</button> 
+				<button type="button" class="btn btn-primary navbar-btn">Login</button> 
 			</div>
 		</div>
 	</nav>
