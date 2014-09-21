@@ -67,8 +67,12 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `canudosway`.`disciplina` (
   `id_disciplina` INT NOT NULL AUTO_INCREMENT,
   `nome_disciplina` VARCHAR(100) NOT NULL,
-  `semestre` VARCHAR(45) NOT NULL,
   `horas` VARCHAR(45) NOT NULL,
+  `semestre` INT NOT NULL,
+  `ead` BIT NOT NULL,
+  `pre_requisito` VARCHAR(500) NULL,
+  `caracterizacao` VARCHAR(1000) NULL,
+  `competencia_essencial` VARCHAR(1000) NULL,
   PRIMARY KEY (`id_disciplina`))
 ENGINE = InnoDB;
 
@@ -126,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `canudosway`.`professor` (
   `id_professor` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(100) NOT NULL,
   `curriculo` TEXT NULL,
-  `id_usuario` INT NOT NULL,
+  `id_usuario` INT NULL,
   PRIMARY KEY (`id_professor`),
   INDEX `usuario_idx` (`id_usuario` ASC),
   CONSTRAINT `usuario_professor`
@@ -189,28 +193,14 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `canudosway`.`turma` (
   `id_turma` INT NOT NULL AUTO_INCREMENT,
   `id_cad_turma` INT NOT NULL,
-  `id_disciplina` INT NOT NULL,
-  `id_professor` INT NOT NULL,
   `semestre` INT NOT NULL,
   `sala` VARCHAR(45) NULL,
   `turno` VARCHAR(45) NULL,
   PRIMARY KEY (`id_turma`),
   INDEX `cad_turma_idx` (`id_cad_turma` ASC),
-  INDEX `disciplina_idx` (`id_disciplina` ASC),
-  INDEX `professor_idx` (`id_professor` ASC),
   CONSTRAINT `cad_turma`
     FOREIGN KEY (`id_cad_turma`)
     REFERENCES `canudosway`.`cad_turma` (`id_cad_turma`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `disciplina_turma`
-    FOREIGN KEY (`id_disciplina`)
-    REFERENCES `canudosway`.`disciplina` (`id_disciplina`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `professor_turma`
-    FOREIGN KEY (`id_professor`)
-    REFERENCES `canudosway`.`professor` (`id_professor`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -234,6 +224,36 @@ CREATE TABLE IF NOT EXISTS `canudosway`.`aluno_turma` (
   CONSTRAINT `turma_aluno`
     FOREIGN KEY (`id_turma`)
     REFERENCES `canudosway`.`turma` (`id_turma`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `canudosway`.`turma_disciplina`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `canudosway`.`turma_disciplina` (
+  `id_turma_disciplina` INT NOT NULL AUTO_INCREMENT,
+  `id_turma` INT NOT NULL,
+  `id_professor` INT NOT NULL,
+  `id_disciplina` INT NOT NULL,
+  PRIMARY KEY (`id_turma_disciplina`),
+  INDEX `turma_disciplina_idx` (`id_turma` ASC),
+  INDEX `disciplina_professor_idx` (`id_professor` ASC),
+  INDEX `disciplina_turma_idx` (`id_disciplina` ASC),
+  CONSTRAINT `turma_disciplina`
+    FOREIGN KEY (`id_turma`)
+    REFERENCES `canudosway`.`turma` (`id_turma`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `disciplina_professor`
+    FOREIGN KEY (`id_professor`)
+    REFERENCES `canudosway`.`professor` (`id_professor`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `disciplina_turma`
+    FOREIGN KEY (`id_disciplina`)
+    REFERENCES `canudosway`.`disciplina` (`id_disciplina`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
