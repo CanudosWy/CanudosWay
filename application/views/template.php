@@ -9,12 +9,7 @@
 	<script src="<?php echo base_url('application/assets/js/jquery-2.1.1.min.js');?>" ></script>
 	<script src="<?php echo base_url('application/assets/js/bootstrap.min.js');?>" ></script>
 	<script src="<?php echo base_url('application/assets/js/jquery-ui.min.js');?>" ></script>
-	<script>
-		$(function() {
-			$( "#sortable" ).sortable();
-			$( "#sortable" ).disableSelection();
-		});		
-	</script>
+	<script src="<?php echo base_url('application/assets/js/form.js');?>" ></script>
 </head>
 <body>
 
@@ -51,10 +46,6 @@
 	</div>
 
 </body>
-<script>
-
-	$( "#accordion" ).accordion();
-</script>
 </html>
 
 

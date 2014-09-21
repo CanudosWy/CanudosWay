@@ -9,13 +9,19 @@ class Disciplina extends MainController {
 		parent::__construct();
 		
 		$this->titulo 				=	"DISCIPLINAS";
-		$this->table				=	"disciplinas";
+		$this->table				=	"disciplina";
 		$this->sessao				=	"disciplina";
 		$this->campos				=	array('nome');//campos da tabela
+		$this->load->model('DisciplinaModel', 'disciplinaModel');
+	}
+
+
+	public function getDetalhesDiciplina(){
+		//print_r($_GET["id"]);die;
+		echo $this->disciplinaModel->detalhesDiciplina($_GET["id"]);
+
 	}
 
 	
 }
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
