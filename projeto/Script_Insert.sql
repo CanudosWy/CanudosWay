@@ -43,7 +43,7 @@ INSERT INTO disciplina_hashtag values (default, 39, 4);
 --Select dados Disciplina
 select disc.nome_disciplina, disc.horas, disc.semestre, 
 disc.ead, disc.pre_requisito, disc.caracterizacao, disc.competencia_essencial,
-cur.nome as curso, cadt.nome as turma, pro.nome as professor, h.nome as hashtag, h.descricao as descr_hash
+cur.nome as curso, cadt.nome as turma, pro.nome as professor, pro.curriculo, h.nome as hashtag, h.descricao as descr_hash
 from disciplina as disc
 inner join curso_disciplina as cd on (disc.id_disciplina = cd.id_disciplina)
 inner join curso as cur on (cd.id_curso = cur.id_curso)

@@ -17,8 +17,8 @@ class Disciplina extends MainController {
 
 
 	public function getDetalhesDiciplina(){
-		//print_r($_GET["id"]);die;
-		echo $this->disciplinaModel->detalhesDiciplina($_GET["id"]);
+		
+		echo json_encode($this->disciplinaModel->detalhesDiciplina($_GET["id"]));
 
 	}
 
