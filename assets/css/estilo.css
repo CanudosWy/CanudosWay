@@ -1,0 +1,42 @@
+*{margin:0px;padding:0px;font-family:arial;}
+
+.sessao{width:950px;margin:0 auto;clear:both;height:auto;}
+#cabecalho{
+margin-bottom:50px;
+float:left;
+width:100%;
+height:60px;
+background: #2285d6;
+}
+#logo{width:395px;height:88px;background:url("../img/img/logo_intro.png");float:left;margin-top:50px;margin-right:50px;}
+#divDescricao{width:500px;height:auto;float:left;}
+#divDescricao p{padding:10px;font-size:9pt;text-align:justify;}
+.negrito{font-weight:bold;}
+.bloco{width:200px;height:300px;float:left;margin-right:20px;}
+.txtBloco{width:98%;float:left;font-size:9pt;text-align:justify;line-height:20px;margin-bottom:20px;padding:2px;}
+.btn{
+	text-decoration: none;
+	font-size: 9pt;
+	border-radius: 4px;
+	color: #FFF;
+	display: block;
+	width: 65%;
+	height: 27px;
+	margin: 20px auto;
+	clear: both;
+	padding-left: 70px;
+	padding-top: 13px;
+}
+.cabecalhoTexto{width:100%;height:90px;float:left;border-radius:4px;margin-bottom:15px;margin-top:35px;}
+.logoTexto{width:70px;height:70px;position:absolute;z-index:100;margin-left:65px;}
+.tituloBloco{width:200px;height:auto;position:absolute;z-index:100;color:#FFF;text-transform:uppercase;margin-top:80px;text-align:center;}
+
+.ico-grade{background:url("../img/img/ico_grade.png");}
+.ico-prof{background:url("../img/img/ico_professores.png");}
+.ico-stat{background:url("../img/img/ico_estatisticas.png");}
+.ico-config{background:url("../img/img/ico_config.png");}
+
+.roxo{background:#5A5891;}
+.verde{background:#63c6a4;}
+.azul{background:#5299d3;}
+.verde-escuro{background:#44ba68;}

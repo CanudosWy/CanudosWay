@@ -3,13 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Canudo's Way - Login</title>
-	<link href="<?php echo base_url('application/assets/css/bootstrap.min.css');?>" rel="stylesheet" media="screen">
-	<link href="<?php echo base_url('application/assets/css/style.css');?>" rel="stylesheet" media="screen">
-	<link href="<?php echo base_url('application/assets/css/jquery-ui.min.css');?>" rel="stylesheet" media="screen">
-	<script src="<?php echo base_url('application/assets/js/jquery-2.1.1.min.js');?>" ></script>
-	<script src="<?php echo base_url('application/assets/js/bootstrap.min.js');?>" ></script>
-	<script src="<?php echo base_url('application/assets/js/jquery-ui.min.js');?>" ></script>
-	<script src="<?php echo base_url('application/assets/js/form.js');?>" ></script>
+	<link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet" media="screen">
+	<link href="<?php echo base_url('assets/css/style.css');?>" rel="stylesheet" media="screen">
+	<link href="<?php echo base_url('assets/css/jquery-ui.min.css');?>" rel="stylesheet" media="screen">
+	<script src="<?php echo base_url('assets/js/jquery-2.1.1.min.js');?>" ></script>
+	<script src="<?php echo base_url('assets/js/bootstrap.min.js');?>" ></script>
+	<script src="<?php echo base_url('assets/js/jquery-ui.min.js');?>" ></script>
+	<script src="<?php echo base_url('assets/js/form.js');?>" ></script>
 </head>
 <body>
 

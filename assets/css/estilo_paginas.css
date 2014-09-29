@@ -1,0 +1,62 @@
+*{margin:0px;padding:0px;font-family:arial;}
+
+.sessao{width:1100px;margin:0 auto;clear:both;height:auto;}
+#cabecalho{
+	float:left;
+	width:100%;
+	height:auto;
+}
+#barraTopo{
+	float:left;
+	width:100%;
+	height:60;
+}
+#logoPagina{
+	width:70px;
+	height:70px;
+	margin:0 auto;
+	position:absolute;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+	
+}
+#tituloPagina{
+	width:100%;
+	height:30px;
+	clear:both;
+	color:#000;
+	font-size:9pt;
+	font-weight:bold;
+	margin:37px auto;
+	text-align:center;
+	float:left;
+}
+#accordion{
+	float:left;
+	margin-top:20px;
+	width:100%;
+}
+.ico-grade{background:url("../img/img/ico_grade.png");}
+.ico-prof{background:url("../img/img/ico_professores.png");}
+.ico-stat{background:url("../img/img/ico_estatisticas.png");}
+.ico-config{background:url("../img/img/ico_config.png");}
+
+.roxo{background:#9473ba;}
+.verde{background:#63c6a4;}
+.azul{background:#5299d3;}
+.verde-escuro{background:#44ba68;}
+
+.ulLista{width:180px;margin:0 auto;float:left;height:100px;margin:5px;}
+.ulLista li{list-style:none;width:180px;}
+.infoDisciplina{width:25px;height:100%;background:#9473ba;float:right;text-decoration:none;}
+.infoDisciplinaIco{width:16px;height:16px;display:block;background:url('../img/exports/ico_info.png') no-repeat; margin:20px auto;}
+.divDisciplina{width:180px;height:58px;border-radius:3px;border:1px solid #9473ba;float:left;margin:0px;background:url('../img/exports/fundo_gradiente.jpg') repeat-x;}
+.divDisciplina h1{font-size:8pt;font-weight:bold;text-transform:uppercase;float:left;padding:5px;width:140px;cursor:pointer;}
+.divDisciplinaHolder{width:180px;height:60px;border-radius:3px;border:1px dashed #9473ba;float:left;margin:5px;}
+.divDisciplinaHolder h1{font-size:8pt;font-weight:bold;text-transform:uppercase;padding:5px;}
+.divDisciplinaHolder h2{font-size:8pt;font-weight:normal;line-height:17px;padding:5px;}
+.tituloSemana{font-size:9pt;float:left;width:180px;height:30px;margin-top:15px;text-align:center;margin:5px;text-transform:uppercase;font-weight:bold;}
+.titulo1{border-radius:3px;width:97%;background:#F36F21;padding:15px;text-transform:uppercase;color:#fff;font-size:9pt;font-weight:bold;display:block;float:left;margin-bottom:10px;}
