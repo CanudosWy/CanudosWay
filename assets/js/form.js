@@ -45,7 +45,7 @@ function detalhesDisciplina(id){
 			}
 			html += '<p> '+values.hashtag+'</p>';
 		});
-		$('.modal-body').html(html);
+		$('#dadosDisciplina').html(html);
 
 	});
 
@@ -54,7 +54,7 @@ function detalhesDisciplina(id){
 	});
 
 	$('#modalDisciplina').modal();
-
+	
 	setTimeout(function(){
 
 		$('#professor').on("click", function() {
@@ -62,6 +62,62 @@ function detalhesDisciplina(id){
 			$('#divCurriculo').toggle();
 			
 		});
-	}, 2000);	
+        nuvemHashTag();
+	}, 2000);
 
+}
+
+function nuvemHashTag(){
+
+	 var word_list = new Array(
+        {text: "Lorem", weight: 13, link: "https://github.com/lucaong/jQCloud"},
+        {text: "Ipsum", weight: 10.5, link: "http://jquery.com/"},
+        {text: "Dolor", weight: 9.4},
+        {text: "Sit", weight: 8},
+        {text: "Amet", weight: 6.2},
+        {text: "Consectetur", weight: 5},
+        {text: "Adipiscing", weight: 5},
+        {text: "Elit", weight: 5},
+        {text: "Nam et", weight: 5},
+        {text: "Leo", weight: 4},
+        {text: "Sapien", weight: 4, link: "http://www.lucaongaro.eu/"},
+        {text: "Pellentesque", weight: 3},
+        {text: "habitant", weight: 3},
+        {text: "morbi", weight: 3},
+        {text: "tristisque", weight: 3},
+        {text: "senectus", weight: 3},
+        {text: "et netus", weight: 3},
+        {text: "et malesuada", weight: 3},
+        {text: "fames", weight: 2},
+        {text: "ac turpis", weight: 2},
+        {text: "egestas", weight: 2},
+        {text: "Aenean", weight: 2},
+        {text: "vestibulum", weight: 2},
+        {text: "elit", weight: 2},
+        {text: "sit amet", weight: 2},
+        {text: "metus", weight: 2},
+        {text: "adipiscing", weight: 2},
+        {text: "ut ultrices", weight: 2},
+        {text: "justo", weight: 1},
+        {text: "dictum", weight: 1},
+        {text: "Ut et leo", weight: 1},
+        {text: "metus", weight: 1},
+        {text: "at molestie", weight: 1},
+        {text: "purus", weight: 1},
+        {text: "Curabitur", weight: 1},
+        {text: "diam", weight: 1},
+        {text: "dui", weight: 1},
+        {text: "ullamcorper", weight: 1},
+        {text: "id vuluptate ut", weight: 1},
+        {text: "mattis", weight: 1},
+        {text: "et nulla", weight: 1},
+        {text: "Sed", weight: 1}
+      );
+
+ 	$(function() {
+        $("#wordcloud").jQCloud(word_list, {
+		  width: 500,
+		  height: 200
+		});
+      });
 }
