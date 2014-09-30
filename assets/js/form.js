@@ -53,17 +53,17 @@ function detalhesDisciplina(id){
 		alert( "Request failed: " + textStatus );
 	});
 
-	$('#modalDisciplina').modal();
-	
-	setTimeout(function(){
+	$('#modalDisciplina').modal( );
 
-		$('#professor').on("click", function() {
+	$('#modalDisciplina').on('shown.bs.modal', function (e) {
+
+       $('#professor').on("click", function() {
 
 			$('#divCurriculo').toggle();
-			
+
 		});
         nuvemHashTag();
-	}, 2000);
+    });
 
 }
 
