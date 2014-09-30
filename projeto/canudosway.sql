@@ -237,6 +237,7 @@ CREATE TABLE IF NOT EXISTS `canudosway`.`turma_disciplina` (
   `id_turma` INT NOT NULL,
   `id_professor` INT NOT NULL,
   `id_disciplina` INT NOT NULL,
+  `dia_semana` INT NOT NULL,
   PRIMARY KEY (`id_turma_disciplina`),
   INDEX `turma_disciplina_idx` (`id_turma` ASC),
   INDEX `disciplina_professor_idx` (`id_professor` ASC),

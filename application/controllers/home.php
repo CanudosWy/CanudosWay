@@ -12,7 +12,7 @@ class Home extends MainController {
 		$this->table				=	"disciplina";
 		$this->sessao				=	"home";
 		$this->campos				=	array('nome_disciplina','semestre','horas');//campos da tabela
-		
+		$this->load->model('DisciplinaModel', 'disciplinaModel');
 	}
 	
 	public function index(){
@@ -27,7 +27,7 @@ class Home extends MainController {
 		$this->data['titulo']			=	$this->titulo;
 		$this->data['sessao']			=	$this->sessao;
 		
-		$this->data['dados']			=	$this->mainModel->lista($this->table);
+		$this->data['dados']			=	$this->disciplinaModel->grade();
 		
 		$this->load->view('home/grade',$this->data);
 	}

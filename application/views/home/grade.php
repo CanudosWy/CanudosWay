@@ -10,7 +10,7 @@
 	<script src="<?php echo base_url('/assets/js/bootstrap.min.js');?>"></script>
 	<script src="<?php echo base_url('/assets/js/form.js');?>"></script>
 	
-	<title>Canudos's WAY - Grade Curricular</title>
+	<title>Canudo's WAY - Grade Curricular</title>
 	
 	<script>
 		$(function() {
@@ -90,7 +90,7 @@
 						foreach($dados as $dado){
 							if($dado->semestre == "1"){
 							?>
-								<ul class="ulLista ulLista<?=$dado->id_disciplina?>">
+								<ul class="ulLista ulLista<?=$dado->dia_semana?>">
 									<li class="divDisciplina">
 										<h1><?=$dado->nome_disciplina?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						

@@ -28,5 +28,16 @@ class DisciplinaModel extends MainModel {
 		
 		return $query->result();
 	}
+
+	public function grade(){
+		
+		$this->db->select('*');
+		$this->db->from('disciplina as d');
+		$this->db->join('turma_disciplina as td', 'd.id_disciplina = td.id_disciplina');		
+
+		$query = $this->db->get();
+		
+		return $query->result();
+	}
 }
 
