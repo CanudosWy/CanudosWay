@@ -4,10 +4,12 @@
 	<link href="<?php echo base_url('/assets/css/bootstrap.min.css');?>" rel="stylesheet" media="screen">
 	<link href="<?php echo base_url('/assets/css/style.css');?>" rel="stylesheet" media="screen">
 	<link href="<?php echo base_url('/assets/css/estilo_paginas.css');?>" rel="stylesheet" media="screen">
+	<link href="<?php echo base_url('/assets/css/jqcloud.css');?>" rel="stylesheet" media="screen">
 	
 	<script src="<?php echo base_url('/assets/js/jquery-2.1.1.min.js');?>"></script>
 	<script src="<?php echo base_url('/assets/js/jquery-ui.min.js');?>"></script>
 	<script src="<?php echo base_url('/assets/js/bootstrap.min.js');?>"></script>
+	<script src="<?php echo base_url('/assets/js/jqcloud-1.0.4.js');?>"></script>
 	<script src="<?php echo base_url('/assets/js/form.js');?>"></script>
 	
 	<title>Canudos's WAY - Grade Curricular</title>
@@ -45,7 +47,7 @@
 	<title>Canudos's WAY</title>
 </head>
 <html>
-	
+	 
 	<div id="tudo">
 		<div id="cabecalho">
 			<div id="barraTopo" class="roxo"></div>
@@ -168,7 +170,8 @@
         <h4 class="modal-title">Detalhes da Disciplina</h4>
       </div>
       <div class="modal-body">
-       
+      <div id="dadosDisciplina"></div>
+       <div id="wordcloud"></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
@@ -176,3 +179,4 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
