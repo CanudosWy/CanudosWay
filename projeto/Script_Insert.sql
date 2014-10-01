@@ -41,10 +41,11 @@ INSERT INTO disciplina_hashtag values (default, 39, 3);
 INSERT INTO disciplina_hashtag values (default, 39, 4);
 
 --Select dados Disciplina
+
 select disc.nome_disciplina, disc.horas, disc.semestre, 
 disc.ead, disc.pre_requisito, disc.caracterizacao, disc.competencia_essencial,
 cur.nome as curso, cadt.nome as turma, pro.nome as professor, pro.curriculo, 
-h.nome as hashtag, h.descricao as descr_hash, td.dia_semana
+h.nome as hashtag, h.descricao as descr_hash, count(dh.id_disciplina_hashtag) as qtdehashtag, td.dia_semana
 from disciplina as disc
 inner join curso_disciplina as cd on (disc.id_disciplina = cd.id_disciplina)
 inner join curso as cur on (cd.id_curso = cur.id_curso)
@@ -55,3 +56,5 @@ inner join professor as pro on(td.id_professor = pro.id_professor)
 inner join disciplina_hashtag as dh on(disc.id_disciplina = dh.id_disciplina)
 inner join hashtag as h on(dh.id_hashtag = h.id_hashtag)
 where disc.id_disciplina = 35
+group by h.id_hashtag
+
