@@ -1,7 +1,7 @@
 <head>
 	<meta charset="UTF-8">	
 	<link href="<?php echo base_url('/assets/css/jquery-ui.min.css');?>" rel="stylesheet" media="screen">
-	<link href="<?php echo base_url('/assets/css/bootstrap.min.css');?>" rel="stylesheet" media="screen">
+	<link href="<?php echo base_url('/assets/css/bootstrap.css');?>" rel="stylesheet" media="screen">
 	<link href="<?php echo base_url('/assets/css/style.css');?>" rel="stylesheet" media="screen">
 	<link href="<?php echo base_url('/assets/css/estilo_paginas.css');?>" rel="stylesheet" media="screen">
 	<link href="<?php echo base_url('/assets/css/jqcloud.css');?>" rel="stylesheet" media="screen">
@@ -174,7 +174,7 @@
        <div id="wordcloud"></div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

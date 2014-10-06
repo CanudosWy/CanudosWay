@@ -34,12 +34,12 @@ function detalhesDisciplina(id){
 		$.each(msg, function(index, values) {
 			if(index == 0){
 				$('.modal-title').html(values.nome_disciplina);	
-				html += '<p><strong>Caracteristicas:</strong> '+values.caracterizacao+'</p>';
+				html += '<p><strong> '+values.caracterizacao+'</strong></p>';
+				html += '<p>'+values.competencia_essencial+'</p>';
 				html += '<p><strong>Pré requisito:</strong> '+values.pre_requisito+'</p>';
 				html += '<p><strong>Semestre:</strong> '+values.semestre+'º Semestre</p>';
 				html += '<p><strong>EAD:</strong> '+(values.ead == '1' ? 'Sim' : 'Não')+'</p>';
-				html += '<p><strong>Competencia essenciais:</strong> '+values.competencia_essencial+'</p>';
-				html += '<span class="floatLeft"><p><strong>Professor:</strong> '+values.professor+'</p><p id="professor" class="glyphicon glyphicon-info-sign"></p></span>';
+				html += '<span class="floatLeft"><p><strong>Professor:</strong> '+values.professor+'</p><p id="professor" class="iconeInfo"></p></span>';
 				html += '<div id="divCurriculo" style="display: none;"><p>'+values.curriculo+'</p></div>';
 				html += '<p><strong>Horas:</strong> '+values.horas+'</p>';
 				html += '<p><strong>Hashtags:</strong></p>';

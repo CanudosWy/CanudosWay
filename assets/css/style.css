@@ -2,12 +2,19 @@
 	margin: 0 auto !important;
 	float: none !important;
 }
-body{
-	width: 98%;
+body,html{
+	width: 100%;
 	margin: 0 auto !important;
 	float: none !important;
 }
-
+.iconeInfo{
+	background: url('../img/exports/info.png');
+	width:16px;
+	height:16px;
+	display:block;float:left;
+	margin:3px 0 0 10px;
+	cursor:pointer;
+}
 #sortable { 
 	margin: auto; 
 	width: 70%; 
