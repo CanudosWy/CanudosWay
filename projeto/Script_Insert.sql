@@ -6,39 +6,60 @@ INSERT INTO disciplina values (default,'Fundamentos de Informática','72', '1', 
 
 INSERT INTO curso values (default,'Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas');
 
-INSERT INTO curso_disciplina values (default, 1, 35);
-INSERT INTO curso_disciplina values (default, 1, 36);
-INSERT INTO curso_disciplina values (default, 1, 37);
-INSERT INTO curso_disciplina values (default, 1, 38);
-INSERT INTO curso_disciplina values (default, 1, 39);
+INSERT INTO curso_disciplina values (default, 1, 1);
+INSERT INTO curso_disciplina values (default, 1, 2);
+INSERT INTO curso_disciplina values (default, 1, 3);
+INSERT INTO curso_disciplina values (default, 1, 4);
+INSERT INTO curso_disciplina values (default, 1, 5);
 
 INSERT INTO cad_turma values (default, 'ADS1N14/1A', 'Truma A, turno noite');
 
-INSERT INTO professor values (default, 'Aline de Campos', 'Curriculo', null);
+INSERT INTO professor values (default, 'Aline de Campos', 'Breve descrição sobre Curriculo', null);
 
 INSERT INTO turma values (default, 1, 1, 'Sala 701', 'Noite');
 
-INSERT INTO turma_disciplina values (default, 1, 1, 35);
-INSERT INTO turma_disciplina values (default, 1, 1, 36);
-INSERT INTO turma_disciplina values (default, 1, 1, 37);
-INSERT INTO turma_disciplina values (default, 1, 1, 38);
-INSERT INTO turma_disciplina values (default, 1, 1, 39);
+INSERT INTO turma_disciplina values (default, 1, 1, 1, 1);
+INSERT INTO turma_disciplina values (default, 1, 1, 2, 2);
+INSERT INTO turma_disciplina values (default, 1, 1, 3, 3);
+INSERT INTO turma_disciplina values (default, 1, 1, 4, 4);
+INSERT INTO turma_disciplina values (default, 1, 1, 5, 5);
 
-INSERT INTO hashtag values (default, '#barbadinha', 'Cadeira muito fácil', 1);
-INSERT INTO hashtag values (default, '#meiaboca', 'Cadeira mais ou menos difícil', 4);
-INSERT INTO hashtag values (default, '#complicada', 'Cadeira difícil', 1);
-INSERT INTO hashtag values (default, '#extraclasse', 'Muito trabalho', 1);
+INSERT INTO hashtag values (default, '#Barbada', '', 0, 'Dificuldade' , 0);
+INSERT INTO hashtag values (default, '#Over8000', '', 0, 'Dificuldade' , 0);
+INSERT INTO hashtag values (default, '#ChuckNorris', '', 0, 'Dificuldade' , 0);
+INSERT INTO hashtag values (default, '#NoWorkToDo', '', 0, 'Trabalhos' , 0);
+INSERT INTO hashtag values (default, '#LightWork', '', 0, 'Trabalhos' , 0);
+INSERT INTO hashtag values (default, '#NoLife', '', 0, 'Trabalhos' , 0);
+INSERT INTO hashtag values (default, '#NoNews', '', 0, 'Quantidade de Conteudo' , 0);
+INSERT INTO hashtag values (default, '#EasyRead', '', 0, 'Quantidade de Conteudo' , 0);
+INSERT INTO hashtag values (default, '#VivaLendo', '', 0, 'Quantidade de Conteudo' , 0);
+INSERT INTO hashtag values (default, '#HojeTemProva?', '', 0, 'Provas' , 0);
+INSERT INTO hashtag values (default, '#ComoSempre', '', 0, 'Provas' , 0);
+INSERT INTO hashtag values (default, '#YouAreNotPrepared', '', 0, 'Provas' , 0);
 
-INSERT INTO disciplina_hashtag values (default, 35, 2);
-INSERT INTO disciplina_hashtag values (default, 35, 4);
-INSERT INTO disciplina_hashtag values (default, 36, 1);
-INSERT INTO disciplina_hashtag values (default, 36, 2);
-INSERT INTO disciplina_hashtag values (default, 37, 3);
-INSERT INTO disciplina_hashtag values (default, 37, 4);
-INSERT INTO disciplina_hashtag values (default, 38, 4);
-INSERT INTO disciplina_hashtag values (default, 38, 1);
-INSERT INTO disciplina_hashtag values (default, 39, 3);
-INSERT INTO disciplina_hashtag values (default, 39, 4);
+
+
+INSERT INTO disciplina_hashtag values (default, 1, 1, 1, 1);
+INSERT INTO disciplina_hashtag values (default, 1, 4, 1, 1);
+INSERT INTO disciplina_hashtag values (default, 1, 7, 1, 1);
+INSERT INTO disciplina_hashtag values (default, 1, 10, 1, 1);
+INSERT INTO disciplina_hashtag values (default, 2, 2, 2, 1);
+INSERT INTO disciplina_hashtag values (default, 2, 5, 2, 1);
+INSERT INTO disciplina_hashtag values (default, 2, 8, 2, 1);
+INSERT INTO disciplina_hashtag values (default, 2, 11, 2, 1);
+INSERT INTO disciplina_hashtag values (default, 3, 3, 3, 1);
+INSERT INTO disciplina_hashtag values (default, 3, 6, 3, 1);
+INSERT INTO disciplina_hashtag values (default, 3, 9, 3, 1);
+INSERT INTO disciplina_hashtag values (default, 3, 12, 3, 1);
+INSERT INTO disciplina_hashtag values (default, 4, 2, 4, 1);
+INSERT INTO disciplina_hashtag values (default, 4, 4, 4, 1);
+INSERT INTO disciplina_hashtag values (default, 4, 9, 4, 1);
+INSERT INTO disciplina_hashtag values (default, 4, 11, 4, 1);
+INSERT INTO disciplina_hashtag values (default, 5, 1, 5, 1);
+INSERT INTO disciplina_hashtag values (default, 5, 5, 5, 1);
+INSERT INTO disciplina_hashtag values (default, 5, 8, 5, 1);
+INSERT INTO disciplina_hashtag values (default, 5, 10, 5, 1);
+
 
 --Select dados Disciplina
 
