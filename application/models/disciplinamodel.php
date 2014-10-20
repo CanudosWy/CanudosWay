@@ -21,8 +21,8 @@ class DisciplinaModel extends MainModel {
 		$this->db->join('turma as t', 'td.id_turma = t.id_turma');
 		$this->db->join('cad_turma as cadt', 't.id_cad_turma = cadt.id_cad_turma');
 		$this->db->join('professor as pro', 'td.id_professor = pro.id_professor');
-		$this->db->join('disciplina_hashtag as dh', 'disc.id_disciplina = dh.id_disciplina');
-		$this->db->join('hashtag as h', 'dh.id_hashtag = h.id_hashtag');
+		$this->db->join('disciplina_hashtag as dh', 'disc.id_disciplina = dh.id_disciplina', 'left');
+		$this->db->join('hashtag as h', 'dh.id_hashtag = h.id_hashtag', 'left');
 		$this->db->where('disc.id_disciplina', $id_disciplina);
 		$this->db->group_by('h.id_hashtag');
 

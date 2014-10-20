@@ -42,8 +42,8 @@ class MainController extends CI_Controller {
 	
 	function __construct() {
         parent::__construct();
-		//carrega o model com metodos padrao
-		$this->load->model('MainModel', 'mainModel');
+		//carrega o model com metodos padrao	
+		$this->load->model('MainModel', 'mainModel');			
 	}
 	
 	public function index()
