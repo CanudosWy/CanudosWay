@@ -21,23 +21,68 @@
 			
 			$(".ulLista1,.dropSegunda").sortable({
                 connectWith: ".dropSegunda,.ulLista1",
-                dropOnEmpty: true
+                dropOnEmpty: true,
+				receive: function(event, ui) {
+					var list = $(this);
+					if (list.children().length > 1) {
+						alert("Selecione apenas uma cadeira!");
+						// enviar o item para o lugar que estava
+						$(ui.sender).sortable('cancel');
+					}
+					
+				}
 			});
 			$(".ulLista2,.dropTerca").sortable({
                 connectWith: ".dropTerca,.ulLista2",
                 dropOnEmpty: true,
+				receive: function(event, ui) {
+					var list = $(this);
+					if (list.children().length > 1) {
+						alert("Selecione apenas uma cadeira!");
+						// enviar o item para o lugar que estava
+						$(ui.sender).sortable('cancel');
+					}
+					
+				}
 			});
 			$(".ulLista3,.dropQuarta").sortable({
                 connectWith: ".dropQuarta,.ulLista3",
                 dropOnEmpty: true,
+				receive: function(event, ui) {
+					var list = $(this);
+					if (list.children().length > 1) {
+						alert("Selecione apenas uma cadeira!");
+						// enviar o item para o lugar que estava
+						$(ui.sender).sortable('cancel');
+					}
+					
+				}
 			});
 			$(".ulLista4,.dropQuinta").sortable({
                 connectWith: ".dropQuinta,.ulLista4",
                 dropOnEmpty: true,
+				receive: function(event, ui) {
+					var list = $(this);
+					if (list.children().length > 1) {
+						alert("Selecione apenas uma cadeira!");
+						// enviar o item para o lugar que estava
+						$(ui.sender).sortable('cancel');
+					}
+					
+				}
 			});
 			$(".ulLista5,.dropSexta").sortable({
                 connectWith: ".dropSexta,.ulLista5",
                 dropOnEmpty: true,
+				receive: function(event, ui) {
+					var list = $(this);
+					if (list.children().length > 1) {
+						alert("Selecione apenas uma cadeira!");
+						// enviar o item para o lugar que estava
+						$(ui.sender).sortable('cancel');
+					}
+					
+				}
 			});
 	 
 			$(".ulListaSegunda,.dropSegunda").disableSelection();
@@ -50,13 +95,14 @@
 	 
 	<div id="tudo">
 		<div id="cabecalho">
-			<div id="barraTopo" class="roxo"></div>
+			<div id="barraTopo"><div class="logoBranco"></div></div>
 			<div id="logoPagina" class="ico-grade"></div>
 			<div id="tituloPagina">GRADE CURRICULAR</div>
+			
 		</div>
 		
 		<div class="sessao">
-			<h1 class="titulo1">seu semestre</h1>
+			<h1 class="titulo1">Arraste as cadeiras que deseja cursar neste semestre</h1>
 		</div>
 		
 		<div class="sessao">
@@ -88,9 +134,27 @@
 						<span class="tituloSemana">sexta-feira</span>
 					</div>
 					
+					<span style="float:left;clear:both;margin:25px 10px 0 0;">ADS1N14/1A</span>
+					
 					<?php
 						foreach($dados as $dado){
-							if($dado->semestre == "1"){
+							if($dado->semestre == "1" && $dado->nome == "ADS1N14/1A"){
+							?>
+								<ul class="ulLista ulLista<?=$dado->dia_semana?>">
+									<li class="divDisciplina">
+										<h1><?=$dado->nome_disciplina?></h1>
+										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+									</li>
+								</ul>
+							<?php
+							}
+						}
+					?>
+					<span style="float:left;clear:both;margin:25px 10px 0 0;">ADS1N14/1B</span>
+					
+					<?php
+						foreach($dados as $dado){
+							if($dado->semestre == "1" && $dado->nome == "ADS1N14/1B"){
 							?>
 								<ul class="ulLista ulLista<?=$dado->dia_semana?>">
 									<li class="divDisciplina">

@@ -36,7 +36,8 @@ class DisciplinaModel extends MainModel {
 		$this->db->select('*');
 		$this->db->from('disciplina as d');
 		$this->db->join('turma_disciplina as td', 'd.id_disciplina = td.id_disciplina');		
-
+		$this->db->join('cad_turma as ct', 'td.id_turma = ct.id_cad_turma');		
+		
 		$query = $this->db->get();
 		
 		return $query->result();
