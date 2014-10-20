@@ -7,7 +7,7 @@ INSERT INTO disciplina values (default,'Fundamentos de Informática','72', '1', 
 INSERT INTO curso values (default,'Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas');
 
 INSERT INTO curso_disciplina values (default, 1, 1);
-INSERT INTO curso_disciplina values (default, 1, 2);
+INSERT INTO curso_disciplina values (default, 1, 2); 
 INSERT INTO curso_disciplina values (default, 1, 3);
 INSERT INTO curso_disciplina values (default, 1, 4);
 INSERT INTO curso_disciplina values (default, 1, 5);
