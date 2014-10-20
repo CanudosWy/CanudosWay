@@ -3,6 +3,16 @@ INSERT INTO disciplina values (default,'Laboratório de Programação I','72', '
 INSERT INTO disciplina values (default,'Matemática Aplicada','72', '1', False, 'Nenhum pré-requisito', 'Estudo de conceitos teóricos de lógica e matemática que são aplicados em áreas fundamentais do curso tecnólogo Análise e Desenvolvimento de Sistemas, como Banco de Dados, Linguagens de Programação, assim como, na Análise Quantitativa e Qualitativa de Processos', 'Usar os conhecimentos básicos da lógica e da matemática como base e fundamentação para as outras unidades curriculares do curso Análise e Desenvolvimento de Sistemas');
 INSERT INTO disciplina values (default,'Sistemas de Informação e Processos','72', '1', False, 'Nenhum pré-requisito', 'Compreensão dos conceitos, objetivos, funções e componentes de Processos de Negócio e de Sistemas de Informação. As dimensões tecnológicas, organizacionais e Informação. Os tipos de Sistemas de Informação. Impacto dos Sistemas de Informação nas humanas dos Sistemas de organizações e nas pessoas', 'Identificar, analisar e relacionar sistemas de informação e processos de negócio');
 INSERT INTO disciplina values (default,'Fundamentos de Informática','72', '1', False, 'Nenhum pré-requisito', 'Fundamentação dos conceitos básicos de informática', 'Conhecer os fundamentos da Informática, tais como fazer transformações de base e operações aritméticas em sistemas de numeração e noções sobre sistemas operacionais, linguagens de programação, redes, virtualização, banco de dados e softwares aplicativos');
+INSERT INTO disciplina values (default,'Algoritmos e Programação II','72', '2', False, 'Algoritmos e Programação I - Laboratório de Programação I', 'Desenvolver os conhecimentos sobre estruturas de dados, orientação a objetos e técnicas para desenvolvimento de aplicações complexas', 'Conhecer os fundamentos da Informática, tais como fazer transformações de base e operações aritméticas em sistemas de numeração e noções sobre sistemas operacionais, linguagens de programação, redes, virtualização, banco de dados e softwares aplicativos');
+INSERT INTO disciplina values (default,'Programação para Internet I','72', '2', False, 'Nenhum pré-requisito', 'Estudo e prática da construção de aplicações para web utilizando-se de linguagens específicas para esta plataforma. Conhecimento em linguagem de marcação, de estilo e desenvolvimento para internet com orientação a objetos em linguagem dinâmica e integração com bases de dados', 'Compreender, selecionar e aplicar tecnologias da Web e da Internet no desenvolvimento de 
+aplicações');
+INSERT INTO disciplina values (default,'Banco de Dados I','72', '2', False, 'Fundamentos de Informática', 'Funcionamento, arquitetura e conceitos fundamentais dos bancos de dados relacionais e objeto relacionais. Utilização de linguagem DDL para a construção de bases de dados conforme regras de normalização; linguagem DML para manipulação de dados; comandos para manipular privilégios de acesso a objetos existentes no banco de dados', 'Manipular sistema gerenciador de banco de dados relacional para criação de estruturas, população de 
+bases de dados e consultas relativas à resolução de situações problema propostas');
+INSERT INTO disciplina values (default,'Engenharia de Software I','72', '2', False, 'Nenhum pré-requisito', 'Modelagem e especificação de necessidades a serem atendidas por um sistema de software na abordagem de análise orientada a objetos', 'Propor soluções em conformidade com os critérios de aceitação do cliente através da abordagem de 
+objetos');
+INSERT INTO disciplina values (default,'Organização de Computadores','72', '2', False, 'Fundamentos de Informática', 'Conhecimento dos princípios básicos da eletricidade. Identificação de formas básicas de representação de dados e compreensão do funcionamento da estrutura interna de um computador', 'Conhecer os princípios básicos da eletricidade. Reconhecer o funcionamento do hardware nos 
+sistemas computacionais, baseados no modelo de Von Neumann, e representar os circuitos digitais 
+básicos utilizados na implementação de processadores e memórias');
 
 INSERT INTO curso values (default,'Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas');
 
@@ -11,6 +21,11 @@ INSERT INTO curso_disciplina values (default, 1, 2);
 INSERT INTO curso_disciplina values (default, 1, 3);
 INSERT INTO curso_disciplina values (default, 1, 4);
 INSERT INTO curso_disciplina values (default, 1, 5);
+INSERT INTO curso_disciplina values (default, 1, 6);
+INSERT INTO curso_disciplina values (default, 1, 7); 
+INSERT INTO curso_disciplina values (default, 1, 8);
+INSERT INTO curso_disciplina values (default, 1, 9);
+INSERT INTO curso_disciplina values (default, 1, 10);
 
 INSERT INTO cad_turma values (default, 'ADS1N14/1A', 'Truma A, turno noite');
 
@@ -23,6 +38,11 @@ INSERT INTO turma_disciplina values (default, 1, 1, 2, 2);
 INSERT INTO turma_disciplina values (default, 1, 1, 3, 3);
 INSERT INTO turma_disciplina values (default, 1, 1, 4, 4);
 INSERT INTO turma_disciplina values (default, 1, 1, 5, 5);
+INSERT INTO turma_disciplina values (default, 1, 1, 6, 1);
+INSERT INTO turma_disciplina values (default, 1, 1, 7, 2);
+INSERT INTO turma_disciplina values (default, 1, 1, 8, 3);
+INSERT INTO turma_disciplina values (default, 1, 1, 9, 4);
+INSERT INTO turma_disciplina values (default, 1, 1, 10, 5);
 
 INSERT INTO hashtag values (default, '#Barbada', '', 0, 'Dificuldade' , 0);
 INSERT INTO hashtag values (default, '#Over8000', '', 0, 'Dificuldade' , 0);
