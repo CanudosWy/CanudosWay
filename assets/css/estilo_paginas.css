@@ -100,4 +100,15 @@
 	float:left;
 	background:url("../img/img/logo_topo.png") no-repeat;
 	margin:10px;
+	cursor:pointer;
+}
+.btnPadrao{
+	padding:10px;
+	border-radius:3px;
+	color:#FFF;
+	font-size:9pt;
+	font-family:arial;
+}
+.borda-verde{
+	border:1px solid #33A8A5;
 }

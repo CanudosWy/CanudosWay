@@ -15,7 +15,7 @@
 			</div>
 		</div>
 		<div class="sessao">
-			<div style="margin-top:80px;float:left;">
+			<div style="margin-top:80px;float:left;margin-left:40px;">
 				<div class="bloco">
 					<div>
 						<div class="logoTexto ico-grade"></div>

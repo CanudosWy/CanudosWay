@@ -86,7 +86,12 @@
 			});
 	 
 			$(".ulListaSegunda,.dropSegunda").disableSelection();
+			
+			$('.logoBranco').click(function(){
+				window.location =  window.location.pathname.substr(0, window.location.pathname.lastIndexOf('/'));
+			})
 		});
+
 	</script>
 	
 	<title>Canudos's WAY</title>
@@ -95,10 +100,14 @@
 	 
 	<div id="tudo">
 		<div id="cabecalho">
-			<div id="barraTopo"><div class="logoBranco"></div></div>
+			<div id="barraTopo">
+				<div class="logoBranco"></div>
+				<div style="float:right;color:#FFF;margin: 15px 15px 0 0;">
+					<span><b>Logado como:</b> Fulano de Tal</span>
+				</div>
+			</div>
 			<div id="logoPagina" class="ico-grade"></div>
 			<div id="tituloPagina">GRADE CURRICULAR</div>
-			
 		</div>
 		
 		<div class="sessao">
@@ -122,6 +131,10 @@
 		</div>
 		
 		<div class="sessao">
+			<button style="float:right" class="btnPadrao verde borda-verde">Salvar</button>
+		</div>
+		
+		<div class="sessao">
 			<div id="accordion">
 				<h3>1º semestre</h3>
 		
@@ -134,15 +147,13 @@
 						<span class="tituloSemana">sexta-feira</span>
 					</div>
 					
-					<span style="float:left;clear:both;margin:25px 10px 0 0;">ADS1N14/1A</span>
-					
 					<?php
 						foreach($dados as $dado){
 							if($dado->semestre == "1" && $dado->nome == "ADS1N14/1A"){
 							?>
 								<ul class="ulLista ulLista<?=$dado->dia_semana?>">
 									<li class="divDisciplina">
-										<h1><?=$dado->nome_disciplina?></h1>
+										<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 									</li>
 								</ul>
@@ -150,7 +161,7 @@
 							}
 						}
 					?>
-					<span style="float:left;clear:both;margin:25px 10px 0 0;">ADS1N14/1B</span>
+					
 					
 					<?php
 						foreach($dados as $dado){
@@ -158,7 +169,7 @@
 							?>
 								<ul class="ulLista ulLista<?=$dado->dia_semana?>">
 									<li class="divDisciplina">
-										<h1><?=$dado->nome_disciplina?></h1>
+										<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 									</li>
 								</ul>
