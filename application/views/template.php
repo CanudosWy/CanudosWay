@@ -1,51 +1,43 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!DOCTYPE HTML>
+<html>
 <head>
-	<meta charset="utf-8">
-	<title>Canudo's Way - Login</title>
-	<link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet" media="screen">
-	<link href="<?php echo base_url('assets/css/style.css');?>" rel="stylesheet" media="screen">
-	<link href="<?php echo base_url('assets/css/jquery-ui.min.css');?>" rel="stylesheet" media="screen">
-	<script src="<?php echo base_url('assets/js/jquery-2.1.1.min.js');?>" ></script>
-	<script src="<?php echo base_url('assets/js/bootstrap.min.js');?>" ></script>
-	<script src="<?php echo base_url('assets/js/jquery-ui.min.js');?>" ></script>
-	<script src="<?php echo base_url('assets/js/form.js');?>" ></script>
+	<meta charset="UTF-8">	
+	<link href="<?php echo base_url('/assets/css/jquery-ui.min.css');?>" rel="stylesheet" media="screen">
+	<link href="<?php echo base_url('/assets/css/bootstrap.css');?>" rel="stylesheet" media="screen">
+	<link href="<?php echo base_url('/assets/css/style.css');?>" rel="stylesheet" media="screen">
+	<link href="<?php echo base_url('/assets/css/estilo_paginas.css');?>" rel="stylesheet" media="screen">
+	<link href="<?php echo base_url('/assets/css/jqcloud.css');?>" rel="stylesheet" media="screen">
+	
+	<script src="<?php echo base_url('/assets/js/jquery-2.1.1.min.js');?>"></script>
+	<script src="<?php echo base_url('/assets/js/jquery-ui.min.js');?>"></script>
+	<script src="<?php echo base_url('/assets/js/bootstrap.min.js');?>"></script>
+	<script src="<?php echo base_url('/assets/js/jqcloud-1.0.4.js');?>"></script>
+	<script src="<?php echo base_url('/assets/js/form.js');?>"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="<?php echo base_url('/assets/js/angularApp.js');?>"></script>
+	
+	<title>Canudo's WAY - <?=$titulo?></title>
+	
 </head>
 <body>
-
-	<div class="page-header">
-
-		<h1>Logo Canudo's Way <small>Aplicativo que possibilita você planejar o melhor caminho para concluir o seu curso na Faculdade Senac.</small></h1>
-	</div>
-
-	<nav class="navbar navbar-default" role="navigation">
-		<div class="container-fluid">    
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li><a href="<?=base_url()?>home">HOME</a></li>
-					<li><a href="#">MENU</a></li>
-					<li><a href="#">MENU</a></li>
-				</ul>
-				<button type="button" class="btn btn-primary navbar-btn">Login</button> 
+	 
+	<div id="tudo">
+		<div id="cabecalho">
+			<div id="barraTopo">
+				<a href="<?=base_url()?>" class="logoBranco"></a>
+				<div style="float:right;color:#FFF;margin: 15px 15px 0 0;">
+					<span><b>Logado como:</b> Fulano de Tal</span>
+				</div>
 			</div>
+			<div id="logoPagina" class="<?=$classe_icone?>"></div>
+			<div id="tituloPagina"><?=$titulo?></div>
 		</div>
-	</nav>
-
-	<ol class="breadcrumb">
-		<li><a href="<?php echo base_url().'home'?>">Home</a></li>
-		<li class="active">Lista</li>
-	</ol>
-
-	<div class="panel panel-default">
-		<div class="panel-body">
-			<?php $this->load->view($pagina)?>
-		</div>
-		<div class="panel-footer">
-			Rodapé
+		
+		<div class="sessao">
+			<?php $this->load->view($pagina);?>
 		</div>
 	</div>
 
-</body>
+</body>	
 </html>
-
-

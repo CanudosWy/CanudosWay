@@ -1,5 +1,7 @@
 *{margin:0px;padding:0px;font-family:arial;}
 
+a:hover{color:#FFF;text-decoration:none;}
+
 .sessao{width:1100px;margin:0 auto;clear:both;height:auto;}
 #cabecalho{
 	float:left;
@@ -111,4 +113,129 @@
 }
 .borda-verde{
 	border:1px solid #33A8A5;
+}
+
+.detalhePerfil{
+	border-right:1px solid #c9c9c9;
+	height:128px;
+	float:left;
+	width:350px;
+	padding:5px;
+	margin: 0 0px 30px 0;
+}
+
+.detalhePerfilCurriculo{
+	height:128px;
+	float:left;
+	width:550px;
+	padding:5px;
+	margin: 0 0px 30px 20px;
+}
+
+.disciplinasProf{
+	padding:10px;
+	border-radius:4px;
+	background:#55BA8D;
+	color:#FFF;
+	font-size:9pt;
+	font-weight:bold;
+	margin:10px;
+	float:left;
+}
+
+.descProf{
+	background:#f1f1f1;
+	background: #f7f7f7; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlOGU4ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #f7f7f7 0%, #e8e8e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#e8e8e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f7f7f7 0%,#e8e8e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f7f7f7 0%,#e8e8e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f7f7f7 0%,#e8e8e8 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f7f7f7 0%,#e8e8e8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-8 */
+
+	height:128px;
+	float:left;
+	width:450px;
+	border:1px solid #e5e3e3;
+	padding:5px;
+	border-radius:4px;
+	margin: 0 50px 50px 0;
+}
+.descProf img{
+	border:1px solid #e5e3e3;
+	border-radius:3px;
+	background:#FFF;
+}
+.descProf img,.descProf h5,.descProf p{float:left;}
+.detalhePerfil img,.detalhePerfil h5{float:left;}
+
+
+.detalhePerfil h5{
+	width:200px;
+	font-weight:bold;
+	font-size:10pt;
+	margin-left:10px;
+}
+
+.descProf h5{
+	width:300px;
+	font-weight:bold;
+	font-size:10pt;
+	margin-left:10px;
+}
+
+.descProf p{
+	width:310px;
+	height:45px;
+	font-size:9pt;
+	margin-left:10px;
+}
+
+#buscaProcessor{
+	width:80%;
+	height:35px;
+	border:1px solid #c9c9c9;
+	border-radius:4px;
+	font-size:9pt;
+	color:#333333;
+	padding:2px;
+	background:#f7f7f7;
+}
+.descProf  .divSocial{
+	width:200px;
+	height:30px;
+	float:left;
+	margin: 5px 0 0 10px;
+}
+
+
+.detalhePerfil  .divSocial{
+	width:200px;
+	height:30px;
+	float:left;
+	margin: 5px 0 0 10px;
+}
+
+.logo-social{
+	cursor:pointer;
+	margin:5px;
+	width:20px;
+	height:20px;
+	float:left;
+	display:block;
+}
+.logo-face{
+	background:url("../img/img/facebook.png") no-repeat;
+}
+.logo-in{
+	background:url("../img/img/linkedin.png") no-repeat;
+}
+.logo-twitter{
+	background:url("../img/img/twitter.png") no-repeat;
+}
+.logo-google{
+	background:url("../img/img/google.png") no-repeat;
 }

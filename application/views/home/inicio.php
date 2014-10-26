@@ -34,7 +34,7 @@
 					</div>
 					<p class="txtBloco">Aliquam eu accumsan urna. Vestibulum lobortis pharetra convallis. Mauris convallis tempor leo et consequat.</p>
 					<p class="txtBloco">Aliquam eu accumsan urna. Vestibulum lobortis pharetra convallis. Mauris convallis tempor leo et consequat.</p>
-					<a href="" class="btn verde">ACESSAR</a>
+					<a href="<?=base_url('professor')?>" class="btn verde">ACESSAR</a>
 				</div>
 				<div class="bloco">
 					<div>

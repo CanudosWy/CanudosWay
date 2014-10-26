@@ -24,12 +24,14 @@ class Home extends MainController {
 	}
 	
 	public function grade(){
-		$this->data['titulo']			=	$this->titulo;
+		$this->data['pagina']			=	'home/grade';
+		$this->data['classe_icone']		=	'ico-grade';
+		$this->data['titulo']			=	'GRADE CURRICULAR';
 		$this->data['sessao']			=	$this->sessao;
 		
 		$this->data['dados']			=	$this->disciplinaModel->grade();
 		
-		$this->load->view('home/grade',$this->data);
+		$this->load->view('template',$this->data);
 	}
 
 	

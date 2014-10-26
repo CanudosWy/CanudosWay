@@ -1,19 +1,3 @@
-<head>
-	<meta charset="UTF-8">	
-	<link href="<?php echo base_url('/assets/css/jquery-ui.min.css');?>" rel="stylesheet" media="screen">
-	<link href="<?php echo base_url('/assets/css/bootstrap.css');?>" rel="stylesheet" media="screen">
-	<link href="<?php echo base_url('/assets/css/style.css');?>" rel="stylesheet" media="screen">
-	<link href="<?php echo base_url('/assets/css/estilo_paginas.css');?>" rel="stylesheet" media="screen">
-	<link href="<?php echo base_url('/assets/css/jqcloud.css');?>" rel="stylesheet" media="screen">
-	
-	<script src="<?php echo base_url('/assets/js/jquery-2.1.1.min.js');?>"></script>
-	<script src="<?php echo base_url('/assets/js/jquery-ui.min.js');?>"></script>
-	<script src="<?php echo base_url('/assets/js/bootstrap.min.js');?>"></script>
-	<script src="<?php echo base_url('/assets/js/jqcloud-1.0.4.js');?>"></script>
-	<script src="<?php echo base_url('/assets/js/form.js');?>"></script>
-	
-	<title>Canudo's WAY - Grade Curricular</title>
-	
 	<script>
 		$(function() {
 			
@@ -87,213 +71,190 @@
 	 
 			$(".ulListaSegunda,.dropSegunda").disableSelection();
 			
-			$('.logoBranco').click(function(){
-				window.location =  window.location.pathname.substr(0, window.location.pathname.lastIndexOf('/'));
-			})
 		});
 
 	</script>
+		
+	<div class="sessao">
+		<h1 class="titulo1">Arraste as cadeiras que deseja cursar neste semestre</h1>
+	</div>
 	
-	<title>Canudos's WAY</title>
-</head>
-<html>
-	 
-	<div id="tudo">
-		<div id="cabecalho">
-			<div id="barraTopo">
-				<div class="logoBranco"></div>
-				<div style="float:right;color:#FFF;margin: 15px 15px 0 0;">
-					<span><b>Logado como:</b> Fulano de Tal</span>
+	<div class="sessao">
+		<span class="tituloSemana">segunda-feira</span>
+		<span class="tituloSemana">terça-feira</span>
+		<span class="tituloSemana">quarta-feira</span>
+		<span class="tituloSemana">quinta-feira</span>
+		<span class="tituloSemana">sexta-feira</span>
+	</div>
+	
+	<div class="sessao">
+		<ul class="divDisciplinaHolder dropSegunda"></ul>
+		<ul class="divDisciplinaHolder dropTerca"></ul>
+		<ul class="divDisciplinaHolder dropQuarta"></ul>
+		<ul class="divDisciplinaHolder dropQuinta"></ul>
+		<ul class="divDisciplinaHolder dropSexta"></ul>
+	</div>
+	
+	<div class="sessao">
+		<button style="float:right" class="btnPadrao verde borda-verde">Salvar</button>
+	</div>
+	
+	<div class="sessao">
+		<div id="accordion">
+			<h3>1º semestre</h3>
+	
+			<div>
+				<div class="sessao">
+					<span class="tituloSemana">segunda-feira</span>
+					<span class="tituloSemana">terça-feira</span>
+					<span class="tituloSemana">quarta-feira</span>
+					<span class="tituloSemana">quinta-feira</span>
+					<span class="tituloSemana">sexta-feira</span>
 				</div>
+				
+				<?php
+					foreach($dados as $dado){
+						if($dado->semestre == "1"){
+						?>
+							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
+								<li class="divDisciplina">
+									<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
+									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+								</li>
+							</ul>
+						<?php
+						}
+					}
+				?>
 			</div>
-			<div id="logoPagina" class="ico-grade"></div>
-			<div id="tituloPagina">GRADE CURRICULAR</div>
-		</div>
-		
-		<div class="sessao">
-			<h1 class="titulo1">Arraste as cadeiras que deseja cursar neste semestre</h1>
-		</div>
-		
-		<div class="sessao">
-			<span class="tituloSemana">segunda-feira</span>
-			<span class="tituloSemana">terça-feira</span>
-			<span class="tituloSemana">quarta-feira</span>
-			<span class="tituloSemana">quinta-feira</span>
-			<span class="tituloSemana">sexta-feira</span>
-		</div>
-		
-		<div class="sessao">
-			<ul class="divDisciplinaHolder dropSegunda"></ul>
-			<ul class="divDisciplinaHolder dropTerca"></ul>
-			<ul class="divDisciplinaHolder dropQuarta"></ul>
-			<ul class="divDisciplinaHolder dropQuinta"></ul>
-			<ul class="divDisciplinaHolder dropSexta"></ul>
-		</div>
-		
-		<div class="sessao">
-			<button style="float:right" class="btnPadrao verde borda-verde">Salvar</button>
-		</div>
-		
-		<div class="sessao">
-			<div id="accordion">
-				<h3>1º semestre</h3>
-		
-				<div>
-					<div class="sessao">
-						<span class="tituloSemana">segunda-feira</span>
-						<span class="tituloSemana">terça-feira</span>
-						<span class="tituloSemana">quarta-feira</span>
-						<span class="tituloSemana">quinta-feira</span>
-						<span class="tituloSemana">sexta-feira</span>
-					</div>
-					
-					<?php
-						foreach($dados as $dado){
-							if($dado->semestre == "1"){
-							?>
-								<ul class="ulLista ulLista<?=$dado->dia_semana?>">
-									<li class="divDisciplina">
-										<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
-										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
-									</li>
-								</ul>
-							<?php
-							}
-						}
-					?>
+		  <h3>2º semestre</h3>
+		  <div>
+				<div class="sessao">
+					<span class="tituloSemana">segunda-feira</span>
+					<span class="tituloSemana">terça-feira</span>
+					<span class="tituloSemana">quarta-feira</span>
+					<span class="tituloSemana">quinta-feira</span>
+					<span class="tituloSemana">sexta-feira</span>
 				</div>
-			  <h3>2º semestre</h3>
-			  <div>
-					<div class="sessao">
-						<span class="tituloSemana">segunda-feira</span>
-						<span class="tituloSemana">terça-feira</span>
-						<span class="tituloSemana">quarta-feira</span>
-						<span class="tituloSemana">quinta-feira</span>
-						<span class="tituloSemana">sexta-feira</span>
-					</div>
-					
-					<?php
-						foreach($dados as $dado){
-							if($dado->semestre == "2"){
-							?>
-								<ul class="ulLista ulLista<?=$dado->dia_semana?>">
-									<li class="divDisciplina">
-										<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
-										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
-									</li>
-								</ul>
-							<?php
-							}
+				
+				<?php
+					foreach($dados as $dado){
+						if($dado->semestre == "2"){
+						?>
+							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
+								<li class="divDisciplina">
+									<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
+									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+								</li>
+							</ul>
+						<?php
 						}
-					?>	
+					}
+				?>	
+			</div>
+		  <h3>3º semestre</h3>
+		  <div>
+				<div class="sessao">
+					<span class="tituloSemana">segunda-feira</span>
+					<span class="tituloSemana">terça-feira</span>
+					<span class="tituloSemana">quarta-feira</span>
+					<span class="tituloSemana">quinta-feira</span>
+					<span class="tituloSemana">sexta-feira</span>
 				</div>
-			  <h3>3º semestre</h3>
-			  <div>
-					<div class="sessao">
-						<span class="tituloSemana">segunda-feira</span>
-						<span class="tituloSemana">terça-feira</span>
-						<span class="tituloSemana">quarta-feira</span>
-						<span class="tituloSemana">quinta-feira</span>
-						<span class="tituloSemana">sexta-feira</span>
-					</div>
-					
-					<?php
-						foreach($dados as $dado){
-							if($dado->semestre == "3"){
-							?>
-								<ul class="ulLista ulLista<?=$dado->dia_semana?>">
-									<li class="divDisciplina">
-										<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
-										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
-									</li>
-								</ul>
-							<?php
-							}
+				
+				<?php
+					foreach($dados as $dado){
+						if($dado->semestre == "3"){
+						?>
+							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
+								<li class="divDisciplina">
+									<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
+									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+								</li>
+							</ul>
+						<?php
 						}
-					?>
+					}
+				?>
+			</div>
+		  <h3>4º semestre</h3>
+		  <div>
+				<div class="sessao">
+					<span class="tituloSemana">segunda-feira</span>
+					<span class="tituloSemana">terça-feira</span>
+					<span class="tituloSemana">quarta-feira</span>
+					<span class="tituloSemana">quinta-feira</span>
+					<span class="tituloSemana">sexta-feira</span>
 				</div>
-			  <h3>4º semestre</h3>
-			  <div>
-					<div class="sessao">
-						<span class="tituloSemana">segunda-feira</span>
-						<span class="tituloSemana">terça-feira</span>
-						<span class="tituloSemana">quarta-feira</span>
-						<span class="tituloSemana">quinta-feira</span>
-						<span class="tituloSemana">sexta-feira</span>
-					</div>
-					
-					<?php
-						foreach($dados as $dado){
-							if($dado->semestre == "4"){
-							?>
-								<ul class="ulLista ulLista<?=$dado->dia_semana?>">
-									<li class="divDisciplina">
-										<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
-										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
-									</li>
-								</ul>
-							<?php
-							}
+				
+				<?php
+					foreach($dados as $dado){
+						if($dado->semestre == "4"){
+						?>
+							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
+								<li class="divDisciplina">
+									<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
+									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+								</li>
+							</ul>
+						<?php
 						}
-					?>
+					}
+				?>
+			</div>
+		  <h3>5º semestre</h3>
+		  <div>
+				<div class="sessao">
+					<span class="tituloSemana">segunda-feira</span>
+					<span class="tituloSemana">terça-feira</span>
+					<span class="tituloSemana">quarta-feira</span>
+					<span class="tituloSemana">quinta-feira</span>
+					<span class="tituloSemana">sexta-feira</span>
 				</div>
-			  <h3>5º semestre</h3>
-			  <div>
-					<div class="sessao">
-						<span class="tituloSemana">segunda-feira</span>
-						<span class="tituloSemana">terça-feira</span>
-						<span class="tituloSemana">quarta-feira</span>
-						<span class="tituloSemana">quinta-feira</span>
-						<span class="tituloSemana">sexta-feira</span>
-					</div>
-					
-					<?php
-						foreach($dados as $dado){
-							if($dado->semestre == "5"){
-							?>
-								<ul class="ulLista ulLista<?=$dado->dia_semana?>">
-									<li class="divDisciplina">
-										<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
-										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
-									</li>
-								</ul>
-							<?php
-							}
+				
+				<?php
+					foreach($dados as $dado){
+						if($dado->semestre == "5"){
+						?>
+							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
+								<li class="divDisciplina">
+									<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
+									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+								</li>
+							</ul>
+						<?php
 						}
-					?>
+					}
+				?>
+			</div>
+		  <h3>6º semestre</h3>
+		 <div>
+				<div class="sessao">
+					<span class="tituloSemana">segunda-feira</span>
+					<span class="tituloSemana">terça-feira</span>
+					<span class="tituloSemana">quarta-feira</span>
+					<span class="tituloSemana">quinta-feira</span>
+					<span class="tituloSemana">sexta-feira</span>
 				</div>
-			  <h3>6º semestre</h3>
-			 <div>
-					<div class="sessao">
-						<span class="tituloSemana">segunda-feira</span>
-						<span class="tituloSemana">terça-feira</span>
-						<span class="tituloSemana">quarta-feira</span>
-						<span class="tituloSemana">quinta-feira</span>
-						<span class="tituloSemana">sexta-feira</span>
-					</div>
-					
-					<?php
-						foreach($dados as $dado){
-							if($dado->semestre == "6"){
-							?>
-								<ul class="ulLista ulLista<?=$dado->dia_semana?>">
-									<li class="divDisciplina">
-										<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
-										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
-									</li>
-								</ul>
-							<?php
-							}
+				
+				<?php
+					foreach($dados as $dado){
+						if($dado->semestre == "6"){
+						?>
+							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
+								<li class="divDisciplina">
+									<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
+									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+								</li>
+							</ul>
+						<?php
 						}
-					?>
-				</div>
+					}
+				?>
 			</div>
 		</div>
 	</div>
 	
-	
-	
-</html>
 <style>
 .ui-accordion .ui-accordion-header{
 	display: block;

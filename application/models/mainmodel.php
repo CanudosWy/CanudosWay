@@ -27,5 +27,10 @@ class MainModel extends CI_Model {
 		
 	}
 	
-	
+	public function searchSingleFieldLike($tabela,$campo){
+		$query = $this->db->like($campo, $_POST['busca']);
+		$query = $this->db->get($tabela);
+		
+		return $query->result();
+	}	
 }
