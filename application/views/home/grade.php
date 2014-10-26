@@ -68,6 +68,19 @@
 					
 				}
 			});
+			$(".ulLista6,.dropSabado").sortable({
+                connectWith: ".dropSabado,.ulLista6",
+                dropOnEmpty: true,
+				receive: function(event, ui) {
+					var list = $(this);
+					if (list.children().length > 1) {
+						alert("Selecione apenas uma cadeira!");
+						// enviar o item para o lugar que estava
+						$(ui.sender).sortable('cancel');
+					}
+					
+				}
+			});
 	 
 			$(".ulListaSegunda,.dropSegunda").disableSelection();
 			
@@ -85,6 +98,7 @@
 		<span class="tituloSemana">quarta-feira</span>
 		<span class="tituloSemana">quinta-feira</span>
 		<span class="tituloSemana">sexta-feira</span>
+		<span class="tituloSemana">sábado</span>
 	</div>
 	
 	<div class="sessao">
@@ -93,6 +107,7 @@
 		<ul class="divDisciplinaHolder dropQuarta"></ul>
 		<ul class="divDisciplinaHolder dropQuinta"></ul>
 		<ul class="divDisciplinaHolder dropSexta"></ul>
+		<ul class="divDisciplinaHolder dropSabado"></ul>
 	</div>
 	
 	<div class="sessao">
@@ -110,6 +125,7 @@
 					<span class="tituloSemana">quarta-feira</span>
 					<span class="tituloSemana">quinta-feira</span>
 					<span class="tituloSemana">sexta-feira</span>
+					<span class="tituloSemana">sábado</span>
 				</div>
 				
 				<?php
@@ -135,6 +151,7 @@
 					<span class="tituloSemana">quarta-feira</span>
 					<span class="tituloSemana">quinta-feira</span>
 					<span class="tituloSemana">sexta-feira</span>
+					<span class="tituloSemana">sábado</span>
 				</div>
 				
 				<?php
@@ -160,6 +177,7 @@
 					<span class="tituloSemana">quarta-feira</span>
 					<span class="tituloSemana">quinta-feira</span>
 					<span class="tituloSemana">sexta-feira</span>
+					<span class="tituloSemana">sábado</span>
 				</div>
 				
 				<?php
@@ -185,6 +203,7 @@
 					<span class="tituloSemana">quarta-feira</span>
 					<span class="tituloSemana">quinta-feira</span>
 					<span class="tituloSemana">sexta-feira</span>
+					<span class="tituloSemana">sábado</span>
 				</div>
 				
 				<?php
@@ -210,6 +229,7 @@
 					<span class="tituloSemana">quarta-feira</span>
 					<span class="tituloSemana">quinta-feira</span>
 					<span class="tituloSemana">sexta-feira</span>
+					<span class="tituloSemana">sábado</span>
 				</div>
 				
 				<?php
@@ -235,6 +255,7 @@
 					<span class="tituloSemana">quarta-feira</span>
 					<span class="tituloSemana">quinta-feira</span>
 					<span class="tituloSemana">sexta-feira</span>
+					<span class="tituloSemana">sábado</span>
 				</div>
 				
 				<?php

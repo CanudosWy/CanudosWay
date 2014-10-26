@@ -19,9 +19,12 @@
 
 </div>
 
+
 <div class="sessao">
 	<h5 style="font-weight:bold;margin:0;">Disciplinas que sou professor(a):</h5>
-	<?foreach($disciplinas as $disciplina){?>
-		<a href="" class="disciplinasProf"><?=$disciplina->nome_disciplina?></a>
-	<?}?>
+	<?php
+	foreach($disciplinas as $disciplina){
+		echo ('<a href="" class="disciplinasProf">' . $disciplina->nome_disciplina. '</a>');
+
+	}  ?>
 </div>

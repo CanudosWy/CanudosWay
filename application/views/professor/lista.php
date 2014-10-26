@@ -6,13 +6,12 @@
 	</form>
 </div>
 
-
 <div class="sessao" style="margin: 0px 0 30px 0">
 	<h4><?=(isset($busca) && $busca != '') ? 'Resultado da busca por: '.$_POST['busca'] : ''?></h4>
 </div>
 <div class="sessao">
-<?
-	foreach($dados as $prof){
+<?php
+	foreach($dados as $prof){		
 	?>
 		<div class="descProf">
 			<img src="<?=($prof->sexo == 'F') ? base_url('assets/img/img/girl.png') : base_url('assets/img/img/boy.png')?>" width="128" height="128" alt="foto professor"/>
@@ -26,6 +25,5 @@
 				<a target="blank" href="<?=($prof->google != '') ? $prof->google: '' ?>" class="logo-social logo-face" style="display:<?=($prof->google != '') ? 'block' : 'none' ?>"></a>
 			</div>
 		</div>
-	<?}
-?>
+	<?php	}	?>
 </div>
