@@ -18,7 +18,7 @@ class ProfessorModel extends MainModel {
 	
 	public function getDisciplinas($id){
 		
-		$this->db->select('distinct(d.nome_disciplina)');
+		$this->db->select('distinct(d.id_disciplina), d.nome_disciplina');
 		$this->db->from('turma_disciplina td');
 		$this->db->join('disciplina d', 'td.id_disciplina = d.id_disciplina');
 		$this->db->where('td.id_professor', $id);
