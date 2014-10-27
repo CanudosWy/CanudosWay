@@ -6,9 +6,9 @@
 		<h5><?=$professor->nome?></h5>
 		<div class="divSocial">
 			<a target="blank" href="<?=($professor->facebook != '') ? $professor->facebook: '' ?>" class="logo-social logo-face" style="display:<?=($professor->facebook != '') ? 'block' : 'none' ?>"></a>
-			<a target="blank" href="<?=($professor->linkedin != '') ? $professor->linkedin: '' ?>" class="logo-social logo-face" style="display:<?=($professor->linkedin != '') ? 'block' : 'none' ?>"></a>
-			<a target="blank" href="<?=($professor->twitter != '') ? $professor->twitter: '' ?>" class="logo-social logo-face" style="display:<?=($professor->twitter != '') ? 'block' : 'none' ?>"></a>
-			<a target="blank" href="<?=($professor->google != '') ? $professor->google: '' ?>" class="logo-social logo-face" style="display:<?=($professor->google != '') ? 'block' : 'none' ?>"></a>
+			<a target="blank" href="<?=($professor->linkedin != '') ? $professor->linkedin: '' ?>" class="logo-social logo-in" style="display:<?=($professor->linkedin != '') ? 'block' : 'none' ?>"></a>
+			<a target="blank" href="<?=($professor->twitter != '') ? $professor->twitter: '' ?>" class="logo-social logo-twitter" style="display:<?=($professor->twitter != '') ? 'block' : 'none' ?>"></a>
+			<a target="blank" href="<?=($professor->google != '') ? $professor->google: '' ?>" class="logo-social logo-google" style="display:<?=($professor->google != '') ? 'block' : 'none' ?>"></a>
 		</div>
 	</div>
 

@@ -143,23 +143,20 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `canudosway`.`professor`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `canudosway`.`professor` (
-  `id_professor` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(100) NOT NULL,
-  `curriculo` TEXT NULL,
-  `id_usuario` INT NULL,
-  `sexo` CHAR(1) NULL,
-  `facebook` VARCHAR(45) NULL,
-  `linkedin` VARCHAR(45) NULL,
-  `twitter` VARCHAR(45) NULL,
-  `google` VARCHAR(45) NULL,
-  PRIMARY KEY (`id_professor`),
-  INDEX `usuario_idx` (`id_usuario` ASC),
-  CONSTRAINT `usuario_professor`
-    FOREIGN KEY (`id_usuario`)
-    REFERENCES `canudosway`.`usuario` (`id_usuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+CREATE TABLE `canudosway`.`professor` (
+	`id_professor` INT(11) NOT NULL AUTO_INCREMENT,
+	`nome` VARCHAR(100) NOT NULL,
+	`curriculo` TEXT NULL,
+	`id_usuario` INT(11) NULL DEFAULT NULL,
+	`sexo` VARCHAR(1) NULL DEFAULT NULL,
+	`facebook` VARCHAR(50) NULL DEFAULT NULL,
+	`linkedin` VARCHAR(50) NULL DEFAULT NULL,
+	`twitter` VARCHAR(50) NULL DEFAULT NULL,
+	`google` VARCHAR(50) NULL DEFAULT NULL,
+	PRIMARY KEY (`id_professor`),
+	INDEX `usuario_idx` (`id_usuario`),
+	CONSTRAINT `usuario_professor` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`) ON UPDATE NO ACTION ON DELETE NO ACTION
+)
 ENGINE = InnoDB;
 
 

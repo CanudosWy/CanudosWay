@@ -20,9 +20,9 @@
 			<a href="<?=base_url('professor/detalhe/'.$prof->id_professor)?>" class="btnPadrao verde" style="float:right;">Perfil Completo</a>
 			<div class="divSocial">
 				<a target="blank" href="<?=($prof->facebook != '') ? $prof->facebook: '' ?>" class="logo-social logo-face" style="display:<?=($prof->facebook != '') ? 'block' : 'none' ?>"></a>
-				<a target="blank" href="<?=($prof->linkedin != '') ? $prof->linkedin: '' ?>" class="logo-social logo-face" style="display:<?=($prof->linkedin != '') ? 'block' : 'none' ?>"></a>
-				<a target="blank" href="<?=($prof->twitter != '') ? $prof->twitter: '' ?>" class="logo-social logo-face" style="display:<?=($prof->twitter != '') ? 'block' : 'none' ?>"></a>
-				<a target="blank" href="<?=($prof->google != '') ? $prof->google: '' ?>" class="logo-social logo-face" style="display:<?=($prof->google != '') ? 'block' : 'none' ?>"></a>
+				<a target="blank" href="<?=($prof->linkedin != '') ? $prof->linkedin: '' ?>" class="logo-social logo-in" style="display:<?=($prof->linkedin != '') ? 'block' : 'none' ?>"></a>
+				<a target="blank" href="<?=($prof->twitter != '') ? $prof->twitter: '' ?>" class="logo-social logo-twitter" style="display:<?=($prof->twitter != '') ? 'block' : 'none' ?>"></a>
+				<a target="blank" href="<?=($prof->google != '') ? $prof->google: '' ?>" class="logo-social logo-google" style="display:<?=($prof->google != '') ? 'block' : 'none' ?>"></a>
 			</div>
 		</div>
 	<?php	}	?>
