@@ -37,8 +37,8 @@ class DisciplinaModel extends MainModel {
 		(SELECT
 			CASE Count(atd.id_turma_disciplina) 
 			WHEN 1 THEN 'Cursando'
-			WHEN 0 THEN 'Disponível'
-			ELSE '' END AS situacao
+			WHEN 0 THEN 'Não Cursada'
+			ELSE 'Cursada' END AS situacao
 			FROM aluno_turma_disciplina as atd
 			WHERE atd.id_turma_disciplina = td.id_turma_disciplina) as situacao
 from aluno as a
