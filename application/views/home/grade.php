@@ -4,8 +4,8 @@
 			$( "#accordion" ).accordion({heightStyle: "content"});
 			
 			$(".ulLista1,.dropSegunda").sortable({
-                connectWith: ".dropSegunda,.ulLista1",
-                dropOnEmpty: true,
+				connectWith: ".dropSegunda,.ulLista1",
+				dropOnEmpty: true,
 				receive: function(event, ui) {
 					var list = $(this);
 					if (list.children().length > 1) {
@@ -17,8 +17,8 @@
 				}
 			});
 			$(".ulLista2,.dropTerca").sortable({
-                connectWith: ".dropTerca,.ulLista2",
-                dropOnEmpty: true,
+				connectWith: ".dropTerca,.ulLista2",
+				dropOnEmpty: true,
 				receive: function(event, ui) {
 					var list = $(this);
 					if (list.children().length > 1) {
@@ -30,8 +30,8 @@
 				}
 			});
 			$(".ulLista3,.dropQuarta").sortable({
-                connectWith: ".dropQuarta,.ulLista3",
-                dropOnEmpty: true,
+				connectWith: ".dropQuarta,.ulLista3",
+				dropOnEmpty: true,
 				receive: function(event, ui) {
 					var list = $(this);
 					if (list.children().length > 1) {
@@ -43,8 +43,8 @@
 				}
 			});
 			$(".ulLista4,.dropQuinta").sortable({
-                connectWith: ".dropQuinta,.ulLista4",
-                dropOnEmpty: true,
+				connectWith: ".dropQuinta,.ulLista4",
+				dropOnEmpty: true,
 				receive: function(event, ui) {
 					var list = $(this);
 					if (list.children().length > 1) {
@@ -56,8 +56,8 @@
 				}
 			});
 			$(".ulLista5,.dropSexta").sortable({
-                connectWith: ".dropSexta,.ulLista5",
-                dropOnEmpty: true,
+				connectWith: ".dropSexta,.ulLista5",
+				dropOnEmpty: true,
 				receive: function(event, ui) {
 					var list = $(this);
 					if (list.children().length > 1) {
@@ -69,8 +69,8 @@
 				}
 			});
 			$(".ulLista6,.dropSabado").sortable({
-                connectWith: ".dropSabado,.ulLista6",
-                dropOnEmpty: true,
+				connectWith: ".dropSabado,.ulLista6",
+				dropOnEmpty: true,
 				receive: function(event, ui) {
 					var list = $(this);
 					if (list.children().length > 1) {
@@ -81,13 +81,13 @@
 					
 				}
 			});
-	 
+
 			$(".ulListaSegunda,.dropSegunda").disableSelection();
 			
 		});
 
 	</script>
-		
+
 	<div class="sessao">
 		<h1 class="titulo1">Arraste as cadeiras que deseja cursar neste semestre</h1>
 	</div>
@@ -117,7 +117,7 @@
 	<div class="sessao">
 		<div id="accordion">
 			<h3>1º semestre</h3>
-	
+
 			<div>
 				<div class="sessao">
 					<span class="tituloSemana">segunda-feira</span>
@@ -129,22 +129,30 @@
 				</div>
 				
 				<?php 				
-					foreach($dados as $dado){						
-						if($dado->semestre == "1"){
+				foreach($dados as $dado){						
+					if($dado->semestre == "1"){
 						?>
-							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
-								<li class="divDisciplina">
-									<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
-									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
-								</li>
-							</ul>
+						<ul class="ulLista ulLista<?=$dado->dia_semana?>">
+							<li class="divDisciplina">
+								<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
+								<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+								<div class="progress" style="height: 10px;">
+									<div  data-toggle="tooltip" data-placement="top" title="75%" class="progress-bar progress-bar-success" style="width: 75%">
+										<span class="sr-only">75%</span>
+									</div>									
+									<div data-toggle="tooltip" data-placement="top" title="25%" class="progress-bar progress-bar-danger" style="width: 25%">
+										<span class="sr-only">25%</span>
+									</div>
+								</div>							
+							</li>							
+						</ul>
 						<?php
-						}
 					}
+				}
 				?>
 			</div>
-		  <h3>2º semestre</h3>
-		  <div>
+			<h3>2º semestre</h3>
+			<div>
 				<div class="sessao">
 					<span class="tituloSemana">segunda-feira</span>
 					<span class="tituloSemana">terça-feira</span>
@@ -155,22 +163,22 @@
 				</div>
 				
 				<?php
-					foreach($dados as $dado){
-						if($dado->semestre == "2"){
+				foreach($dados as $dado){
+					if($dado->semestre == "2"){
 						?>
-							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
-								<li class="divDisciplina">
-									<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
-									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
-								</li>
-							</ul>
+						<ul class="ulLista ulLista<?=$dado->dia_semana?>">
+							<li class="divDisciplina">
+								<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
+								<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+							</li>
+						</ul>
 						<?php
-						}
 					}
+				}
 				?>	
 			</div>
-		  <h3>3º semestre</h3>
-		  <div>
+			<h3>3º semestre</h3>
+			<div>
 				<div class="sessao">
 					<span class="tituloSemana">segunda-feira</span>
 					<span class="tituloSemana">terça-feira</span>
@@ -181,22 +189,22 @@
 				</div>
 				
 				<?php
-					foreach($dados as $dado){
-						if($dado->semestre == "3"){
+				foreach($dados as $dado){
+					if($dado->semestre == "3"){
 						?>
-							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
-								<li class="divDisciplina">
-									<h1><?=$dado->nome_disciplina."<br>".$dado->nome . "<br>".$dado->situacao?></h1>
-									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
-								</li>
-							</ul>
+						<ul class="ulLista ulLista<?=$dado->dia_semana?>">
+							<li class="divDisciplina">
+								<h1><?=$dado->nome_disciplina."<br>".$dado->nome . "<br>".$dado->situacao?></h1>
+								<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+							</li>
+						</ul>
 						<?php
-						}
 					}
+				}
 				?>
 			</div>
-		  <h3>4º semestre</h3>
-		  <div>
+			<h3>4º semestre</h3>
+			<div>
 				<div class="sessao">
 					<span class="tituloSemana">segunda-feira</span>
 					<span class="tituloSemana">terça-feira</span>
@@ -207,22 +215,22 @@
 				</div>
 				
 				<?php
-					foreach($dados as $dado){
-						if($dado->semestre == "4"){
+				foreach($dados as $dado){
+					if($dado->semestre == "4"){
 						?>
-							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
-								<li class="divDisciplina">
-									<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
-									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
-								</li>
-							</ul>
+						<ul class="ulLista ulLista<?=$dado->dia_semana?>">
+							<li class="divDisciplina">
+								<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
+								<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+							</li>
+						</ul>
 						<?php
-						}
 					}
+				}
 				?>
 			</div>
-		  <h3>5º semestre</h3>
-		  <div>
+			<h3>5º semestre</h3>
+			<div>
 				<div class="sessao">
 					<span class="tituloSemana">segunda-feira</span>
 					<span class="tituloSemana">terça-feira</span>
@@ -233,22 +241,22 @@
 				</div>
 				
 				<?php
-					foreach($dados as $dado){
-						if($dado->semestre == "5"){
+				foreach($dados as $dado){
+					if($dado->semestre == "5"){
 						?>
-							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
-								<li class="divDisciplina">
-									<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
-									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
-								</li>
-							</ul>
+						<ul class="ulLista ulLista<?=$dado->dia_semana?>">
+							<li class="divDisciplina">
+								<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
+								<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+							</li>
+						</ul>
 						<?php
-						}
 					}
+				}
 				?>
 			</div>
-		  <h3>6º semestre</h3>
-		 <div>
+			<h3>6º semestre</h3>
+			<div>
 				<div class="sessao">
 					<span class="tituloSemana">segunda-feira</span>
 					<span class="tituloSemana">terça-feira</span>
@@ -259,69 +267,69 @@
 				</div>
 				
 				<?php
-					foreach($dados as $dado){
-						if($dado->semestre == "6"){
+				foreach($dados as $dado){
+					if($dado->semestre == "6"){
 						?>
-							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
-								<li class="divDisciplina">
-									<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
-									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
-								</li>
-							</ul>
+						<ul class="ulLista ulLista<?=$dado->dia_semana?>">
+							<li class="divDisciplina">
+								<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
+								<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+							</li>
+						</ul>
 						<?php
-						}
 					}
+				}
 				?>
 			</div>
 		</div>
 	</div>
 	
-<style>
-.ui-accordion .ui-accordion-header{
-	display: block;
-	cursor: pointer;
-	position: relative;
-	margin: 1px 0 0 0;
-	padding-top: 17px;
-	font-size: 9pt;
-	height: 25px;
-}
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
-	background:#9473ba;
-	border:none;
-	color:#FFF;
-	text-transform:uppercase;
-	font-size:9pt;
-	font-family:arial;
-	font-weight:bold;
-}
-.ui-widget-content{
-	background:transparent;
-	border:none;
-}
-.ui-accordion .ui-accordion-content{
-	overflow:hidden;
-	padding:10px 0px 0px 0px;
-}
-</style>
+	<style>
+		.ui-accordion .ui-accordion-header{
+			display: block;
+			cursor: pointer;
+			position: relative;
+			margin: 1px 0 0 0;
+			padding-top: 17px;
+			font-size: 9pt;
+			height: 25px;
+		}
+		.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+			background:#9473ba;
+			border:none;
+			color:#FFF;
+			text-transform:uppercase;
+			font-size:9pt;
+			font-family:arial;
+			font-weight:bold;
+		}
+		.ui-widget-content{
+			background:transparent;
+			border:none;
+		}
+		.ui-accordion .ui-accordion-content{
+			overflow:hidden;
+			padding:10px 0px 0px 0px;
+		}
+	</style>
 
-<form id="getDetalhesDiciplina" action="<?=base_url('disciplina/getDetalhesDiciplina')?>" />
+	<form id="getDetalhesDiciplina" action="<?=base_url('disciplina/getDetalhesDiciplina')?>" />
 
-<div class="modal fade" id="modalDisciplina">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
-        <h4 class="modal-title"></h4>
-      </div>
-      <div class="modal-body">
-      <div id="dadosDisciplina"></div>
-       <div id="wordcloud"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+		<div class="modal fade" id="modalDisciplina">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+						<h4 class="modal-title"></h4>
+					</div>
+					<div class="modal-body">
+						<div id="dadosDisciplina"></div>
+						<div id="wordcloud"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
