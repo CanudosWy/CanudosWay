@@ -128,13 +128,13 @@
 					<span class="tituloSemana">sábado</span>
 				</div>
 				
-				<?php
-					foreach($dados as $dado){
+				<?php 				
+					foreach($dados as $dado){						
 						if($dado->semestre == "1"){
 						?>
 							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
 								<li class="divDisciplina">
-									<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
+									<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 								</li>
 							</ul>
@@ -160,7 +160,7 @@
 						?>
 							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
 								<li class="divDisciplina">
-									<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
+									<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 								</li>
 							</ul>
@@ -186,7 +186,7 @@
 						?>
 							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
 								<li class="divDisciplina">
-									<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
+									<h1><?=$dado->nome_disciplina."<br>".$dado->nome . "<br>".$dado->situacao?></h1>
 									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 								</li>
 							</ul>
@@ -212,7 +212,7 @@
 						?>
 							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
 								<li class="divDisciplina">
-									<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
+									<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 								</li>
 							</ul>
@@ -238,7 +238,7 @@
 						?>
 							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
 								<li class="divDisciplina">
-									<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
+									<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 								</li>
 							</ul>
@@ -264,7 +264,7 @@
 						?>
 							<ul class="ulLista ulLista<?=$dado->dia_semana?>">
 								<li class="divDisciplina">
-									<h1><?=$dado->nome_disciplina." ".$dado->nome?></h1>
+									<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 								</li>
 							</ul>

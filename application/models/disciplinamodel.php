@@ -31,16 +31,31 @@ class DisciplinaModel extends MainModel {
 		return $query->result();
 	}
 
-	public function grade(){
-		
-		$this->db->select('*');
-		$this->db->from('disciplina as d');
-		$this->db->join('turma_disciplina as td', 'd.id_disciplina = td.id_disciplina');		
-		$this->db->join('cad_turma as ct', 'td.id_turma = ct.id_cad_turma');		
-		
-		$query = $this->db->get();
-		
-		return $query->result();
-	}
+	public function grade(){		
+
+		$sql = "select *, 
+		(SELECT
+			CASE Count(atd.id_turma_disciplina) 
+			WHEN 1 THEN 'Cursando'
+			WHEN 0 THEN 'Disponível'
+			ELSE '' END AS situacao
+			FROM aluno_turma_disciplina as atd
+			WHERE atd.id_turma_disciplina = td.id_turma_disciplina) as situacao
+from aluno as a
+join aluno_curso as ac on(a.id_aluno = ac.id_aluno)
+join curso as c on(ac.id_curso =  c.id_curso)
+join curso_disciplina as cd on (c.id_curso = cd.id_curso)
+join disciplina as d on(cd.id_disciplina = d.id_disciplina)
+join turma_disciplina as td on(d.id_disciplina = td.id_disciplina)
+join turma as t on(td.id_turma = t.id_turma)
+join cad_turma as ct on(t.id_cad_turma = ct.id_cad_turma)
+join aluno_turma_disciplina as atd on(a.id_aluno = atd.id_aluno)
+where a.id_aluno = 1";
+
+$query = $this->db->query($sql);		
+
+return $query->result();
+
+}
 }
 
