@@ -34,11 +34,7 @@ class DisciplinaModel extends MainModel {
 	public function grade(){		
 
 		$sql = "select *, 
-		(SELECT
-			CASE Count(atd.id_turma_disciplina) 
-			WHEN 1 THEN 'Cursando'
-			WHEN 0 THEN 'Não Cursada'
-			ELSE 'Cursada' END AS situacao
+		(SELECT situacao
 			FROM aluno_turma_disciplina as atd
 			WHERE atd.id_turma_disciplina = td.id_turma_disciplina) as situacao
 from aluno as a
@@ -49,7 +45,6 @@ join disciplina as d on(cd.id_disciplina = d.id_disciplina)
 join turma_disciplina as td on(d.id_disciplina = td.id_disciplina)
 join turma as t on(td.id_turma = t.id_turma)
 join cad_turma as ct on(t.id_cad_turma = ct.id_cad_turma)
-join aluno_turma_disciplina as atd on(a.id_aluno = atd.id_aluno)
 where a.id_aluno = 1";
 
 $query = $this->db->query($sql);		

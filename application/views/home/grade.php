@@ -136,15 +136,19 @@
 							<li class="divDisciplina">
 								<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 								<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
-								<div class="progress" style="height: 10px;">
-									<div  data-toggle="tooltip" data-placement="top" title="75%" class="progress-bar progress-bar-success" style="width: 75%">
-										<span class="sr-only">75%</span>
-									</div>									
-									<div data-toggle="tooltip" data-placement="top" title="25%" class="progress-bar progress-bar-danger" style="width: 25%">
+															
+							</li>	
+							<div class="progress" style="height: 10px;">
+									<div  data-toggle="tooltip" data-placement="top" title="Dificuldade - Facil - 50%" class="progress-bar progress-bar-success" style="width: 50%">
+										<span class="sr-only">50%</span>
+									</div>	
+									<div data-toggle="tooltip" data-placement="top" title="Dificuldade - Médio - 25%" class="progress-bar progress-bar-warning" style="width: 25%">
+										<span class="sr-only">25%</span>
+									</div>								
+									<div data-toggle="tooltip" data-placement="top" title=" Dificuldade - Difícil - 25%" class="progress-bar progress-bar-danger" style="width: 25%">
 										<span class="sr-only">25%</span>
 									</div>
-								</div>							
-							</li>							
+								</div>						
 						</ul>
 						<?php
 					}
