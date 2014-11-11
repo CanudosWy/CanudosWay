@@ -1,93 +1,6 @@
-	<script>
-		$(function() {
-			
-			$( "#accordion" ).accordion({heightStyle: "content"});
-			
-			$(".ulLista1,.dropSegunda").sortable({
-				connectWith: ".dropSegunda,.ulLista1",
-				dropOnEmpty: true,
-				receive: function(event, ui) {
-					var list = $(this);
-					if (list.children().length > 1) {
-						alert("Selecione apenas uma cadeira!");
-						// enviar o item para o lugar que estava
-						$(ui.sender).sortable('cancel');
-					}
-					
-				}
-			});
-			$(".ulLista2,.dropTerca").sortable({
-				connectWith: ".dropTerca,.ulLista2",
-				dropOnEmpty: true,
-				receive: function(event, ui) {
-					var list = $(this);
-					if (list.children().length > 1) {
-						alert("Selecione apenas uma cadeira!");
-						// enviar o item para o lugar que estava
-						$(ui.sender).sortable('cancel');
-					}
-					
-				}
-			});
-			$(".ulLista3,.dropQuarta").sortable({
-				connectWith: ".dropQuarta,.ulLista3",
-				dropOnEmpty: true,
-				receive: function(event, ui) {
-					var list = $(this);
-					if (list.children().length > 1) {
-						alert("Selecione apenas uma cadeira!");
-						// enviar o item para o lugar que estava
-						$(ui.sender).sortable('cancel');
-					}
-					
-				}
-			});
-			$(".ulLista4,.dropQuinta").sortable({
-				connectWith: ".dropQuinta,.ulLista4",
-				dropOnEmpty: true,
-				receive: function(event, ui) {
-					var list = $(this);
-					if (list.children().length > 1) {
-						alert("Selecione apenas uma cadeira!");
-						// enviar o item para o lugar que estava
-						$(ui.sender).sortable('cancel');
-					}
-					
-				}
-			});
-			$(".ulLista5,.dropSexta").sortable({
-				connectWith: ".dropSexta,.ulLista5",
-				dropOnEmpty: true,
-				receive: function(event, ui) {
-					var list = $(this);
-					if (list.children().length > 1) {
-						alert("Selecione apenas uma cadeira!");
-						// enviar o item para o lugar que estava
-						$(ui.sender).sortable('cancel');
-					}
-					
-				}
-			});
-			$(".ulLista6,.dropSabado").sortable({
-				connectWith: ".dropSabado,.ulLista6",
-				dropOnEmpty: true,
-				receive: function(event, ui) {
-					var list = $(this);
-					if (list.children().length > 1) {
-						alert("Selecione apenas uma cadeira!");
-						// enviar o item para o lugar que estava
-						$(ui.sender).sortable('cancel');
-					}
-					
-				}
-			});
-
-			$(".ulListaSegunda,.dropSegunda").disableSelection();
-			
-		});
-
-	</script>
-
+	<script src="<?php echo base_url('/assets/js/grade.js');?>"></script>
+	
+	
 	<div class="sessao">
 		<h1 class="titulo1">Arraste as cadeiras que deseja cursar neste semestre</h1>
 	</div>
@@ -113,6 +26,34 @@
 	<div class="sessao">
 		<button style="float:right" class="btnPadrao verde borda-verde">Salvar</button>
 	</div>
+
+	<div class="sessao divFiltroContent">
+		<h1 class="titulo1" id="filtroTitulo">Filtros </h1>		
+		<div class="sessao" id="divFiltro" style="display: none;">
+			<label>Dias da semana:</label>
+			<select title="Basic example" multiple="multiple" name="example-basic" size="5">
+				<option value="option1">Option 1</option>
+				<option value="option2">Option 2</option>
+				<option value="option3">Option 3</option>
+				<option value="option4">Option 4</option>				
+			</select>
+			<label>Professor:</label>
+			<select title="Basic example" multiple="multiple" name="example-basic" size="5">
+				<option value="option1">Option 1</option>
+				<option value="option2">Option 2</option>
+				<option value="option3">Option 3</option>
+				<option value="option4">Option 4</option>				
+			</select>
+			<label>Dificuldade:</label>
+			<select title="Basic example" multiple="multiple" name="example-basic" size="5">
+				<option value="option1">Option 1</option>
+				<option value="option2">Option 2</option>
+				<option value="option3">Option 3</option>
+				<option value="option4">Option 4</option>				
+			</select>
+
+		</div>
+	</div>
 	
 	<div class="sessao">
 		<div id="accordion">
@@ -136,19 +77,19 @@
 							<li class="divDisciplina">
 								<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 								<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
-															
+
 							</li>	
 							<div class="progress" style="height: 10px;">
-									<div  data-toggle="tooltip" data-placement="top" title="Dificuldade - Facil - 50%" class="progress-bar progress-bar-success" style="width: 50%">
-										<span class="sr-only">50%</span>
-									</div>	
-									<div data-toggle="tooltip" data-placement="top" title="Dificuldade - Médio - 25%" class="progress-bar progress-bar-warning" style="width: 25%">
-										<span class="sr-only">25%</span>
-									</div>								
-									<div data-toggle="tooltip" data-placement="top" title=" Dificuldade - Difícil - 25%" class="progress-bar progress-bar-danger" style="width: 25%">
-										<span class="sr-only">25%</span>
-									</div>
-								</div>						
+								<div  data-toggle="tooltip" data-placement="top" title="Dificuldade - Facil - 50%" class="progress-bar progress-bar-success" style="width: 50%">
+									<span class="sr-only">50%</span>
+								</div>	
+								<div data-toggle="tooltip" data-placement="top" title="Dificuldade - Médio - 25%" class="progress-bar progress-bar-warning" style="width: 25%">
+									<span class="sr-only">25%</span>
+								</div>								
+								<div data-toggle="tooltip" data-placement="top" title=" Dificuldade - Difícil - 25%" class="progress-bar progress-bar-danger" style="width: 25%">
+									<span class="sr-only">25%</span>
+								</div>
+							</div>						
 						</ul>
 						<?php
 					}
