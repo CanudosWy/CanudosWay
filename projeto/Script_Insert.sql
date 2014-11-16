@@ -73,9 +73,39 @@ INSERT INTO curso_disciplina values (default, 1, 31);
 
 INSERT INTO cad_turma values (default, 'ADS1N14/1A', 'Truma A, turno noite');
 
-INSERT INTO professor values (default, 'Aline de Campos', 'Breve descrição sobre Curriculo', null);
+INSERT INTO professor values (default, 'Ivonei da Silva Marques', 'Mestre', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Marcela Gonçalves Santos', 'Mestre', null, 'F', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Magda Leyser', 'Mestre', null, 'F', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Roberto Zanoni', 'Mestre', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Rafael Jeffman', 'Mestre', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Fabio Giulian Marques', 'Especialista', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Aline de Campos', 'Mestre', null, 'F', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Luis Ries', 'Mestre', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Antônio Ramos', 'Mestre', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Marco Mangan', 'Doutor', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Pietro Cunha Dolci', 'Doutor', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Márcia Vieira', 'Mestre', null, 'F', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Thiago Motta', 'Mestre', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Sirlei Isaia', 'Mestre', null, 'F', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Guilherme Bertoni Machado', 'Mestre', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Júlio Carnevale de Almeida', 'Especialista', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Lúcia Saccomori', 'Mestre', null, 'F', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Leda Cadore', 'Mestre', null, 'F', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Fábio Dal´Osto', 'Mestre', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Alexandre Casacurta', 'Mestre', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Lizandro Kirst da Silva', 'Especialista', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Rafael Gastão', 'Mestre', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Luciano Zanuz', 'Mestre', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Rui Gureghian Scarinci', 'Doutor', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Carlos Carbonera', 'Especialista', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Jader Marques', 'Mestre', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Rafael Lossurdo', 'Especialsita', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Kelber Albeche', 'Especialsita', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Daniel Krauze', 'Especialsita', null, 'M', 'face', 'linkedin', 'twitter', 'google', 'lattes');
+INSERT INTO professor values (default, 'Priscila Schafhauzer', 'Especialista', null, 'F', 'face', 'linkedin', 'twitter', 'google', 'lattes');
 
 INSERT INTO turma values (default, 1, 1, 'Sala 701', 'Noite');
+
 
 INSERT INTO turma_disciplina values (default, 1, 1, 1, 1);
 INSERT INTO turma_disciplina values (default, 1, 1, 2, 2);
