@@ -2,7 +2,44 @@
 $(document).ready(function() {
 
 
-	$("select").multiselect();
+	$("#diaSemana").multiselect({
+		checkAll: function(){
+			for(i = 1; i <= 6; i++ ){
+				$('#accordion').find('.ulLista' + i).show();
+			}
+		},
+		uncheckAll: function(){
+			for(i = 1; i <= 6; i++ ){
+				$('#accordion').find('.ulLista' + i).hide();
+			}
+		}
+	});
+
+	$("#professor").multiselect({
+		checkAll: function(){	
+			$("input[name='multiselect_professor']").each( function(){
+
+				$('#accordion').find('.ulProfessor' + $(this).val()).show();
+			
+			});
+		},
+		uncheckAll: function(){
+			$("input[name='multiselect_professor']").each( function(){
+
+				$('#accordion').find('.ulProfessor' + $(this).val()).hide();
+			
+			});
+		}
+	});
+
+	$("#dificuldade").multiselect({
+		checkAll: function(){
+			alert('All Multiselect items selected!');
+		},
+		uncheckAll: function(){
+			alert('All Multiselect items unselected!');
+		}
+	});
 
 	$('#filtroTitulo').on("click", function() {
 
@@ -119,7 +156,7 @@ function avaliarDisciplina($id){
 	request.fail(function( jqXHR, textStatus ) {
 		alert( "Request failed: " + textStatus );
 	});
-		
+
 	$('#conteudoAvaliacao').load("http://localhost/CanudosWay/home/votacao");
 	$('#modalAvaliarDisciplina').modal();
 
@@ -128,10 +165,26 @@ function avaliarDisciplina($id){
 function Filtros(){
 
 	$("input[name='multiselect_diaSemana']").click(function(){ 
+		
+		if($(this).is(':checked') == true){			
+			$('#accordion').find('.ulLista' + $(this).val()).show();
+		}else{
+			$('#accordion').find('.ulLista' + $(this).val()).hide();
+		}
 
-		$("input[name='multiselect_diaSemana']").each(function(index, element){
-			console.log(element);
-		});
+	});	
+
+	$("input[name='multiselect_professor']").click(function(){ 
+
+		if($(this).is(':checked') == true){			
+			$('#accordion').find('.ulProfessor' + $(this).val()).show();
+		}else{
+			$('#accordion').find('.ulProfessor' + $(this).val()).hide();
+		}
 
 	});
+
+
+
+	
 }
