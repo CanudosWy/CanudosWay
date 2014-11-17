@@ -10,9 +10,9 @@
 	<h4><?=(isset($busca) && $busca != '') ? 'Resultado da busca por: '.$_POST['busca'] : ''?></h4>
 </div>
 <div class="sessao">
-<?php
+	<?php
 	foreach($dados as $prof){		
-	?>
+		?>
 		<div class="descProf">
 			<img src="<?=($prof->sexo == 'F') ? base_url('assets/img/img/girl.png') : base_url('assets/img/img/boy.png')?>" width="128" height="128" alt="foto professor"/>
 			<h5><?=$prof->nome?></h5>
@@ -23,7 +23,8 @@
 				<a target="blank" href="<?=($prof->linkedin != '') ? $prof->linkedin: '' ?>" class="logo-social logo-in" style="display:<?=($prof->linkedin != '') ? 'block' : 'none' ?>"></a>
 				<a target="blank" href="<?=($prof->twitter != '') ? $prof->twitter: '' ?>" class="logo-social logo-twitter" style="display:<?=($prof->twitter != '') ? 'block' : 'none' ?>"></a>
 				<a target="blank" href="<?=($prof->google != '') ? $prof->google: '' ?>" class="logo-social logo-google" style="display:<?=($prof->google != '') ? 'block' : 'none' ?>"></a>
+				<a target="blank" href="<?=($prof->curriculo_lattes != '') ? $prof->curriculo_lattes: '' ?>" class="logo-social logo-lattes" style="display:<?=($prof->curriculo_lattes != '') ? 'block' : 'none' ?>"></a>
 			</div>
 		</div>
-	<?php	}	?>
-</div>
+		<?php	}	?>
+	</div>

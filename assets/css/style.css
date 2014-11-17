@@ -49,3 +49,12 @@ body,html{
 	float: left;
 	width: 100%;
 }
+
+#divFiltro{
+	height: 100px;
+}
+#filtroTitulo{
+	cursor: pointer;
+	background: #FDB813;
+}
+

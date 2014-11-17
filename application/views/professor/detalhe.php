@@ -9,6 +9,7 @@
 			<a target="blank" href="<?=($professor->linkedin != '') ? $professor->linkedin: '' ?>" class="logo-social logo-in" style="display:<?=($professor->linkedin != '') ? 'block' : 'none' ?>"></a>
 			<a target="blank" href="<?=($professor->twitter != '') ? $professor->twitter: '' ?>" class="logo-social logo-twitter" style="display:<?=($professor->twitter != '') ? 'block' : 'none' ?>"></a>
 			<a target="blank" href="<?=($professor->google != '') ? $professor->google: '' ?>" class="logo-social logo-google" style="display:<?=($professor->google != '') ? 'block' : 'none' ?>"></a>
+			<a target="blank" href="<?=($professor->curriculo_lattes != '') ? $professor->curriculo_lattes: '' ?>" class="logo-social logo-lattes" style="display:<?=($professor->curriculo_lattes != '') ? 'block' : 'none' ?>"></a>
 		</div>
 	</div>
 
@@ -31,20 +32,20 @@
 
 <form id="getDetalhesDiciplina" action="<?=base_url('disciplina/getDetalhesDiciplina')?>" />
 
-<div class="modal fade" id="modalDisciplina">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
-        <h4 class="modal-title"></h4>
-      </div>
-      <div class="modal-body">
-      <div id="dadosDisciplina"></div>
-       <div id="wordcloud"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+	<div class="modal fade" id="modalDisciplina">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+					<h4 class="modal-title"></h4>
+				</div>
+				<div class="modal-body">
+					<div id="dadosDisciplina"></div>
+					<div id="wordcloud"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
