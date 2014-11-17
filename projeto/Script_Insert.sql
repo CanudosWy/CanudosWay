@@ -107,51 +107,53 @@ INSERT INTO professor values (default, 'Priscila Schafhauzer', 'Especialista', n
 INSERT INTO turma values (default, 1, 1, 'Sala 701', 'Noite');
 
 
-INSERT INTO turma_disciplina values (default, 1, 1, 1, 1);
-INSERT INTO turma_disciplina values (default, 1, 1, 2, 2);
-INSERT INTO turma_disciplina values (default, 1, 1, 3, 3);
-INSERT INTO turma_disciplina values (default, 1, 1, 4, 4);
-INSERT INTO turma_disciplina values (default, 1, 1, 5, 5);
-INSERT INTO turma_disciplina values (default, 1, 1, 6, 1);
-INSERT INTO turma_disciplina values (default, 1, 1, 7, 2);
-INSERT INTO turma_disciplina values (default, 1, 1, 8, 3);
-INSERT INTO turma_disciplina values (default, 1, 1, 9, 4);
-INSERT INTO turma_disciplina values (default, 1, 1, 10, 5);
-INSERT INTO turma_disciplina values (default, 1, 1, 11, 1);
-INSERT INTO turma_disciplina values (default, 1, 1, 12, 2);
-INSERT INTO turma_disciplina values (default, 1, 1, 13, 3);
-INSERT INTO turma_disciplina values (default, 1, 1, 14, 4);
-INSERT INTO turma_disciplina values (default, 1, 1, 15, 5);
-INSERT INTO turma_disciplina values (default, 1, 1, 16, 6);
-INSERT INTO turma_disciplina values (default, 1, 1, 17, 1);
-INSERT INTO turma_disciplina values (default, 1, 1, 18, 2);
-INSERT INTO turma_disciplina values (default, 1, 1, 19, 3);
-INSERT INTO turma_disciplina values (default, 1, 1, 20, 4);
-INSERT INTO turma_disciplina values (default, 1, 1, 21, 5);
-INSERT INTO turma_disciplina values (default, 1, 1, 22, 1);
-INSERT INTO turma_disciplina values (default, 1, 1, 23, 2);
-INSERT INTO turma_disciplina values (default, 1, 1, 24, 3);
-INSERT INTO turma_disciplina values (default, 1, 1, 25, 4);
-INSERT INTO turma_disciplina values (default, 1, 1, 26, 5);
-INSERT INTO turma_disciplina values (default, 1, 1, 27, 1);
-INSERT INTO turma_disciplina values (default, 1, 1, 28, 2);
-INSERT INTO turma_disciplina values (default, 1, 1, 29, 3);
-INSERT INTO turma_disciplina values (default, 1, 1, 30, 4);
-INSERT INTO turma_disciplina values (default, 1, 1, 31, 5);
 
 
-INSERT INTO hashtag values (default, '#Barbada', '', 0, 'Dificuldade' , 0);
-INSERT INTO hashtag values (default, '#Over8000', '', 0, 'Dificuldade' , 0);
-INSERT INTO hashtag values (default, '#ChuckNorris', '', 0, 'Dificuldade' , 0);
-INSERT INTO hashtag values (default, '#NoWorkToDo', '', 0, 'Trabalhos' , 0);
-INSERT INTO hashtag values (default, '#LightWork', '', 0, 'Trabalhos' , 0);
-INSERT INTO hashtag values (default, '#NoLife', '', 0, 'Trabalhos' , 0);
-INSERT INTO hashtag values (default, '#NoNews', '', 0, 'Quantidade de Conteudo' , 0);
-INSERT INTO hashtag values (default, '#EasyRead', '', 0, 'Quantidade de Conteudo' , 0);
-INSERT INTO hashtag values (default, '#VivaLendo', '', 0, 'Quantidade de Conteudo' , 0);
-INSERT INTO hashtag values (default, '#HojeTemProva?', '', 0, 'Provas' , 0);
-INSERT INTO hashtag values (default, '#ComoSempre', '', 0, 'Provas' , 0);
-INSERT INTO hashtag values (default, '#YouAreNotPrepared', '', 0, 'Provas' , 0);
+INSERT INTO turma_disciplina values (default, 1, 1, 2,'701', 2,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 3,'701', 3,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 4,'701', 4,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 5, '701',5,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 6, '701',1,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 7, '701',2,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 8, '701',3,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 9, '701',4,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 10, '701',5,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 11, '701',1,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 12, '701',2,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 13, '701',3,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 14, '701',4,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 15, '701',5,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 16, '701',6,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 17, '701',1,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 18, '701',2,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 19, '701',3,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 20, '701',4,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 21, '701',5,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 22, '701',1,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 23,'701', 2,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 24, '701',3,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 25, '701',4,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 26, '701',5,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 27, '701',1,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 28, '701',2,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 29, '701',3,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 30, '701',4,null);
+INSERT INTO turma_disciplina values (default, 1, 1, 31, '701',5,null);
+
+
+
+INSERT INTO hashtag values (default, '#Barbada', '', 0, 'Dificuldade');
+INSERT INTO hashtag values (default, '#Over8000', '', 0, 'Dificuldade');
+INSERT INTO hashtag values (default, '#ChuckNorris', '', 0, 'Dificuldade');
+INSERT INTO hashtag values (default, '#NoWorkToDo', '', 0, 'Trabalhos');
+INSERT INTO hashtag values (default, '#LightWork', '', 0, 'Trabalhos');
+INSERT INTO hashtag values (default, '#NoLife', '', 0, 'Trabalhos');
+INSERT INTO hashtag values (default, '#NoNews', '', 0, 'Quantidade de Conteudo');
+INSERT INTO hashtag values (default, '#EasyRead', '', 0, 'Quantidade de Conteudo');
+INSERT INTO hashtag values (default, '#VivaLendo', '', 0, 'Quantidade de Conteudo');
+INSERT INTO hashtag values (default, '#HojeTemProva?', '', 0, 'Provas');
+INSERT INTO hashtag values (default, '#ComoSempre', '', 0, 'Provas');
+INSERT INTO hashtag values (default, '#YouAreNotPrepared', '', 0, 'Provas');
 
 
 

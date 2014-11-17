@@ -254,22 +254,22 @@ CREATE TABLE IF NOT EXISTS `canudosway`.`disciplina_hashtag` (
   INDEX `hashtag_disciplina_idx` (`id_hashtag` ASC),
   INDEX `aluno_idx` (`id_aluno` ASC),
   INDEX `turma_disciplina_idx` (`id_turma_disciplina` ASC),
-  CONSTRAINT `fk_disciplina_hashtag2`
+  CONSTRAINT `fk_disciplina_hashtag22`
     FOREIGN KEY (`id_disciplina`)
     REFERENCES `canudosway`.`disciplina` (`id_disciplina`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_hashtag_disciplina2`
+  CONSTRAINT `fk_hashtag_disciplina22`
     FOREIGN KEY (`id_hashtag`)
     REFERENCES `canudosway`.`hashtag` (`id_hashtag`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_aluno2`
+  CONSTRAINT `fk_aluno22`
     FOREIGN KEY (`id_aluno`)
     REFERENCES `canudosway`.`aluno` (`id_aluno`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_turma_disciplina2`
+  CONSTRAINT `fk_turma_disciplina22`
     FOREIGN KEY (`id_turma_disciplina`)
     REFERENCES `canudosway`.`turma_disciplina` (`id_turma_disciplina`)
     ON DELETE NO ACTION

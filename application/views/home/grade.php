@@ -81,7 +81,7 @@
 								<li class="divDisciplina">
 									<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 									<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
-
+									<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
 								</li>	
 								<div class="progress" style="height: 10px;">
 									<div  data-toggle="tooltip" data-placement="top" title="Dificuldade - Facil - 50%" class="progress-bar progress-bar-success" style="width: 50%">
@@ -274,6 +274,23 @@
 						<div class="modal-body">
 							<div id="dadosDisciplina"></div>
 							<div id="wordcloud"></div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			
+			<div class="modal fade" id="modalAvaliarDisciplina">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+							<h4 class="modal-title"></h4>
+						</div>
+						<div class="modal-body">
+							<div id="conteudoAvaliacao"></div>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>

@@ -21,7 +21,7 @@
 	<script src="<?php echo base_url('/assets/js/jquery.multiselect.min.js');?>"></script>
 	<script src="<?php echo base_url('/assets/js/jquery.multiselect.filter.min.js');?>"></script>
 	<script src="<?php echo base_url('/assets/js/jquery.multiselect.br.js');?>"></script>
-
+	
 	<script src="<?php echo base_url('/assets/js/form.js');?>"></script>
 	
 	<title>Canudo's WAY - <?=$titulo?></title>

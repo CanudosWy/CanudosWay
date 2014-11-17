@@ -33,6 +33,18 @@ class Home extends MainController {
 		
 		$this->load->view('template',$this->data);
 	}
+	
+	public function votacao(){
+		//passando de valores para a view
+		$this->data['pagina']			=	'home/votacao';
+		$this->data['classe_icone']		=	'ico-grade';
+		$this->data['titulo']			=	'GRADE CURRICULAR';
+		$this->data['sessao']			=	$this->sessao;
+		
+		$this->data['dados']			=	$this->disciplinaModel->hashtags();
+		
+		$this->load->view('home/votacao',$this->data);
+	}
 
 	
 }

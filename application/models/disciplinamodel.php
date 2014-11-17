@@ -47,12 +47,18 @@ class DisciplinaModel extends MainModel {
 		join turma as t on(td.id_turma = t.id_turma)
 		join cad_turma as ct on(t.id_cad_turma = ct.id_cad_turma)
 		join professor as p on(p.id_professor = td.id_professor)
-		where a.id_aluno = 1";
+		where a.id_aluno = 4";
 
-$query = $this->db->query($sql);		
+		$query = $this->db->query($sql);		
 
-return $query->result();
+		return $query->result();
 
-}
+	}
+	
+	public function hashtags(){
+		$query = $this->db->get('hashtag');
+		
+		return $query->result();
+	}
 }
 

@@ -2,6 +2,7 @@ $( document ).ready(function() {
 
 	form();
 	buttons();
+
 });
 
 function form(){
@@ -78,3 +79,4 @@ function nuvemHashTag(word_list){
 		});
 	});
 }
+

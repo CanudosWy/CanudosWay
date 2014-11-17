@@ -1,0 +1,97 @@
+#containerVotacao .steps ul{
+	display:inline;
+	float:left;
+	width:100%;
+}
+#containerVotacao .steps ul li{
+	list-style:none;
+	float:left;
+}
+#containerVotacao .steps ul li a div{
+	float:left;
+	color:#AAAAB0;
+}
+#containerVotacao .steps ul li.current a div .number{
+	background:#377CB6;
+	color:#FFF;
+}
+#containerVotacao .steps ul li a div .number{
+	float:left;
+	width:20px;
+	text-align:center;
+	padding:10px;
+	background:#EEEEEE;
+	border-radius:33px;
+}
+#containerVotacao .steps ul li a div .linha{
+	float:left;
+	width:20px;
+	border:1px solid #EEEEEE;
+	margin-top:20px;
+}
+#containerVotacao .steps ul li:last-child a div .linha{
+	display:none;
+}
+#containerVotacao .steps ul li.current a div .linha{
+	border:1px solid #377CB6;
+}
+#containerVotacao .current-info{
+	display:none;
+}
+
+#containerVotacao .content{
+	background:#FFF;
+	border-radius:4px;
+	color:#AAAAB0;
+	padding:10px;
+	margin-top:25px;
+}
+#containerVotacao .content .title{
+	display:none;
+}
+#containerVotacao .content .titulo{
+	color:#3c3c3c;
+	font-weight:bold;
+	font-size:11pt;
+	margin: 0 0 30px 0;
+}
+#containerVotacao .actions{
+	float:right;
+	margin-top:10px;
+}
+#containerVotacao .actions ul li{
+	list-style:none;
+	float:left;
+	margin:10px;
+}
+#containerVotacao .actions ul li a{
+	background: #2184be;
+	color: #fff;
+	display: block;
+	padding: .5em 1em;
+	text-decoration: none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+}
+
+#containerVotacao .actions .disabled a{
+	background: #eee;
+	color: #aaa;
+}
+
+.hashtag{
+	padding:6px;
+	background:#55BA8D;
+	float:left;
+	border-radius:4px;
+	color:#FFF;
+	margin-right:10px;
+}
+.hashtag input{
+	width: 20px;
+	height: 20px;
+	float:left;
+	margin: 0 10px 0 0;
+}
