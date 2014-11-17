@@ -112,8 +112,7 @@ function avaliarDisciplina($id){
 				$('.modal-title').html('Avaliando disciplina: '+values.nome_disciplina);	
 				
 			}
-		});
-		$('#dadosDisciplina').html(html);
+		});		
 
 	});
 
@@ -121,7 +120,7 @@ function avaliarDisciplina($id){
 		alert( "Request failed: " + textStatus );
 	});
 		
-	$('#conteudoAvaliacao').load("http://localhost:8070/CanudosWay/home/votacao");
+	$('#conteudoAvaliacao').load("http://localhost/CanudosWay/home/votacao");
 	$('#modalAvaliarDisciplina').modal();
 
 }
