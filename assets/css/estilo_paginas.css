@@ -63,7 +63,8 @@ a:hover{color:#FFF;text-decoration:none;}
 .azul{background:#3B82C0;}
 .verde-escuro{background:#1A7B67;}
 
-.ulLista{width:170px;margin:0 auto;float:left;height:100px;margin:5px;}
+.ulLista{width:170px;margin:0 auto;float:left;height:120px;margin:5px;}
+.progress{float:left;width:100%;border-radius:0px;}
 .ulLista li{list-style:none;width:170px;}
 .infoDisciplina{width:20px;height:50%;background:#9473ba;float:right;text-decoration:none;cursor:pointer;}
 .infoDisciplinaIco{width:16px;height:16px;display:block;background:url('../img/exports/ico_info.png') no-repeat; margin:8px auto;}
@@ -257,5 +258,18 @@ a:hover{color:#FFF;text-decoration:none;}
 	background:url("../img/img/lattes.jpg") no-repeat;
 }
 .disciplina{
-	width: 172px; height: 82px; float: left; margin: 5px;
+	width: 172px; height: 120px; float: left; margin: 5px;
+}
+
+
+.votacaoSalva{
+	color:green;
+	font-size:12pt;
+	text-align:center;
+}
+
+.votacaoErro{
+	color:red;
+	font-size:12pt;
+	text-align:center;
 }

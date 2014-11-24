@@ -135,12 +135,12 @@ $(document).ready(function() {
 	
 });
 
-function avaliarDisciplina($id){
+function avaliarDisciplina(aluno,disciplina,turma){
 
 	var request = $.ajax({
 		url: $('#getDetalhesDiciplina').attr("action"),
 		type: "GET",
-		data: { id : $id },
+		data: { id : disciplina },
 		dataType: "JSON"
 	});
 	request.done(function( msg ) {
@@ -157,7 +157,7 @@ function avaliarDisciplina($id){
 		alert( "Request failed: " + textStatus );
 	});
 
-	$('#conteudoAvaliacao').load("http://localhost/CanudosWay/home/votacao");
+	$('#conteudoAvaliacao').load("http://localhost:8070/CanudosWay/home/votacao/"+aluno+"/"+disciplina+"/"+turma);
 	$('#modalAvaliarDisciplina').modal();
 
 }

@@ -15,7 +15,13 @@
 	
 </head>
 <body>
-	<form>
+	<form id="formVotaocao" method="POST" action="<?=base_url('home/salvarVotacao')?>" >
+		
+		<input type="hidden" name="id_disciplina" value="<?=$disciplina?>"/>
+		<input type="hidden" name="id_turma" value="<?=$turma?>"/>
+		<input type="hidden" name="id_aluno" value="<?=$aluno?>"/>
+		
+		
 		<div id="containerVotacao">
 			<h3>Dificuldade</h3>
 			<section>
@@ -39,7 +45,7 @@
 					foreach($dados as $hashtag){
 						if($hashtag->tema == "Trabalhos"){
 						?>
-							<span class="hashtag"><input type="radio" name="dificuldade" value="<?=$hashtag->id_hashtag?>"/> <span><?=$hashtag->nome?></span></span>
+							<span class="hashtag"><input type="radio" name="trabalhos" value="<?=$hashtag->id_hashtag?>"/> <span><?=$hashtag->nome?></span></span>
 						<?php	
 						}
 					}
@@ -53,7 +59,7 @@
 					foreach($dados as $hashtag){
 						if($hashtag->tema == "Provas"){
 						?>
-							<span class="hashtag"><input type="radio" name="dificuldade" value="<?=$hashtag->id_hashtag?>"/> <span><?=$hashtag->nome?></span></span>
+							<span class="hashtag"><input type="radio" name="provas" value="<?=$hashtag->id_hashtag?>"/> <span><?=$hashtag->nome?></span></span>
 						<?php	
 						}
 					}
@@ -67,7 +73,7 @@
 					foreach($dados as $hashtag){
 						if($hashtag->tema == "Quantidade de Conteudo"){
 						?>
-							<span class="hashtag"><input type="radio" name="dificuldade" value="<?=$hashtag->id_hashtag?>"/> <span><?=$hashtag->nome?></span></span>
+							<span class="hashtag"><input type="radio" name="quantidadeConteudo" value="<?=$hashtag->id_hashtag?>"/> <span><?=$hashtag->nome?></span></span>
 						<?php	
 						}
 					}

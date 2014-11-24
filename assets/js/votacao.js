@@ -15,7 +15,20 @@ $( document ).ready(function() {
 		},
 		onFinished: function (event, currentIndex)
 		{
-			alert("Submitted!");
+			//$('#formVotaocao').submit();
+			var request = $.ajax({
+				url: $('#formVotaocao').attr("action"),
+				type: "POST",
+				data: $('#formVotaocao').serialize(),
+				dataType: "JSON"
+			});
+			request.done(function( msg ) {
+				$('#conteudoAvaliacao').empty();
+				$('#conteudoAvaliacao').html("<h2 class='votacaoSalva'>"+msg+"</h2>");
+			});
+			request.fail(function( jqXHR, textStatus ) {
+				alert( "Erro ao salvar votação, tente novamente");
+			});
 		},
 		titleTemplate: '<div><span class="number">#index#</span><span class="linha"></span></div>',
 	});

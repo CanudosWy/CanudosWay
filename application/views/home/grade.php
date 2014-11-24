@@ -82,7 +82,7 @@
 									<li class="divDisciplina">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
-										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
+										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
 									</li>	
 									<div class="progress" style="height: 10px;">
 										<div  data-toggle="tooltip" data-placement="top" title="Dificuldade - Facil - 50%" class="progress-bar progress-bar-success" style="width: 50%">

@@ -47,7 +47,7 @@ class DisciplinaModel extends MainModel {
 		join turma as t on(td.id_turma = t.id_turma)
 		join cad_turma as ct on(t.id_cad_turma = ct.id_cad_turma)
 		join professor as p on(p.id_professor = td.id_professor)
-		where a.id_aluno = 1";
+		where a.id_aluno = 4";
 
 		$query = $this->db->query($sql);		
 
@@ -59,6 +59,19 @@ class DisciplinaModel extends MainModel {
 		$query = $this->db->get('hashtag');
 		
 		return $query->result();
+	}
+	
+	public function salvarVotacao($dados){
+		$this->db->insert_batch('disciplina_hashtag', $dados);
+	}
+	
+	public function validaAlunoVotacao($aluno,$disciplina){
+		
+		$this->db->select('*')->from('disciplina_hashtag')->where('id_aluno', $aluno)->where('id_disciplina', $disciplina); 
+		$query = $this->db->get();
+		
+		return $query->num_rows();
+		
 	}
 }
 

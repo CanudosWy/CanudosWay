@@ -12,6 +12,7 @@ class Home extends MainController {
 		$this->table				=	"disciplina";
 		$this->sessao				=	"home";
 		$this->campos				=	array('nome_disciplina','semestre','horas');//campos da tabela
+		
 		$this->load->model('DisciplinaModel', 'disciplinaModel');
 	}
 	
@@ -34,17 +35,77 @@ class Home extends MainController {
 		$this->load->view('template',$this->data);
 	}
 	
-	public function votacao(){
-		//passando de valores para a view
-		$this->data['pagina']			=	'home/votacao';
-		$this->data['classe_icone']		=	'ico-grade';
-		$this->data['titulo']			=	'GRADE CURRICULAR';
-		$this->data['sessao']			=	$this->sessao;
+	public function votacao($aluno,$disciplina,$turma){
 		
-		$this->data['dados']			=	$this->disciplinaModel->hashtags();
+		if($this->disciplinaModel->validaAlunoVotacao($aluno,$disciplina) > 0){
+			//ja votou para essa disciplina
+			
+			$this->data['msg']			=	"Você ja votou nesta disciplina";
+			
+			$this->load->view('home/votacaoErro',$this->data);
 		
-		$this->load->view('home/votacao',$this->data);
+		}else{
+			//passando de valores para a view
+			$this->data['pagina']			=	'home/votacao';
+			$this->data['classe_icone']		=	'ico-grade';
+			$this->data['titulo']			=	'GRADE CURRICULAR';
+			$this->data['sessao']			=	$this->sessao;
+			
+			$this->data['dados']			=	$this->disciplinaModel->hashtags();
+			$this->data['aluno']			=	$aluno;
+			$this->data['disciplina']		=	$disciplina;
+			$this->data['turma']			=	$turma;
+			
+			$this->load->view('home/votacao',$this->data);
+		}
 	}
-
+	
+	public function salvarVotacao(){
+	
+		$aluno			=	$this->input->post('id_aluno');
+		$disciplina		=	$this->input->post('id_disciplina');
+		$turma			=	$this->input->post('id_turma');
+		
+		$data = array();
+		
+		if($this->input->post('dificuldade') != false){
+			array_push($data, array(
+			   'id_aluno' => $aluno ,
+			   'id_disciplina' => $disciplina ,
+			   'id_turma_disciplina' => $turma,
+			   'id_hashtag' => $this->input->post('dificuldade')
+			));
+		} 
+		if($this->input->post('trabalhos') != false){
+			array_push($data, array(
+			   'id_aluno' => $aluno ,
+			   'id_disciplina' => $disciplina ,
+			   'id_turma_disciplina' => $turma,
+			   'id_hashtag' => $this->input->post('trabalhos')
+			));
+		} 
+		if($this->input->post('provas') != false){
+			array_push($data, array(
+			   'id_aluno' => $aluno ,
+			   'id_disciplina' => $disciplina ,
+			   'id_turma_disciplina' => $turma,
+			   'id_hashtag' => $this->input->post('provas')
+			));
+		} 
+		if($this->input->post('quantidadeConteudo') != false){
+			array_push($data, array(
+			   'id_aluno' => $aluno ,
+			   'id_disciplina' => $disciplina ,
+			   'id_turma_disciplina' => $turma,
+			   'id_hashtag' => $this->input->post('quantidadeConteudo')
+			));
+		} 
+		
+		$this->disciplinaModel->salvarVotacao($data);
+		
+		echo json_encode($this->data['msg']	=	"Votação salva com sucesso!");
+		
+		
+	}
 	
 }
