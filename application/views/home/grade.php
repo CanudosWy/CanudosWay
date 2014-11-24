@@ -76,6 +76,7 @@
 					<?php 				
 					foreach($dados as $dado){						
 						if($dado->semestre == "1"){
+						
 							?>
 							<div class="disciplina">
 								<ul class="ulLista ulLista<?=$dado->dia_semana?> ulProfessor<?=$dado->id_professor?>" >
@@ -122,6 +123,7 @@
 									<li class="divDisciplina">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
 									</li>
 								</ul>
 							</div>
@@ -150,6 +152,7 @@
 									<li class="divDisciplina">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome . "<br>".$dado->situacao?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
 									</li>
 								</ul>
 							</div>
@@ -178,6 +181,7 @@
 									<li class="divDisciplina">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
 									</li>
 								</ul>
 							</div>
@@ -206,6 +210,7 @@
 									<li class="divDisciplina">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
 									</li>
 								</ul>
 							</div>
@@ -234,6 +239,7 @@
 									<li class="divDisciplina">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
+										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
 									</li>
 								</ul>
 							</div>
