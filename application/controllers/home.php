@@ -17,6 +17,13 @@ class Home extends MainController {
 	}
 	
 	public function index(){
+
+		$newdata = array(
+			'userid'  => '1'
+			);
+
+		$this->session->set_userdata($newdata);
+
 		//passando de valores para a view
 		$this->data['titulo']			=	$this->titulo;
 		$this->data['sessao']			=	$this->sessao;
@@ -25,6 +32,7 @@ class Home extends MainController {
 	}
 	
 	public function grade(){
+	//print_r($this->session->userdata('userid'));die;		
 		$this->data['pagina']			=	'home/grade';
 		$this->data['classe_icone']		=	'ico-grade';
 		$this->data['titulo']			=	'GRADE CURRICULAR';
@@ -43,7 +51,7 @@ class Home extends MainController {
 			$this->data['msg']			=	"Você ja votou nesta disciplina";
 			
 			$this->load->view('home/votacaoErro',$this->data);
-		
+
 		}else{
 			//passando de valores para a view
 			$this->data['pagina']			=	'home/votacao';
@@ -61,7 +69,7 @@ class Home extends MainController {
 	}
 	
 	public function salvarVotacao(){
-	
+
 		$aluno			=	$this->input->post('id_aluno');
 		$disciplina		=	$this->input->post('id_disciplina');
 		$turma			=	$this->input->post('id_turma');
@@ -70,35 +78,35 @@ class Home extends MainController {
 		
 		if($this->input->post('dificuldade') != false){
 			array_push($data, array(
-			   'id_aluno' => $aluno ,
-			   'id_disciplina' => $disciplina ,
-			   'id_turma_disciplina' => $turma,
-			   'id_hashtag' => $this->input->post('dificuldade')
-			));
+				'id_aluno' => $aluno ,
+				'id_disciplina' => $disciplina ,
+				'id_turma_disciplina' => $turma,
+				'id_hashtag' => $this->input->post('dificuldade')
+				));
 		} 
 		if($this->input->post('trabalhos') != false){
 			array_push($data, array(
-			   'id_aluno' => $aluno ,
-			   'id_disciplina' => $disciplina ,
-			   'id_turma_disciplina' => $turma,
-			   'id_hashtag' => $this->input->post('trabalhos')
-			));
+				'id_aluno' => $aluno ,
+				'id_disciplina' => $disciplina ,
+				'id_turma_disciplina' => $turma,
+				'id_hashtag' => $this->input->post('trabalhos')
+				));
 		} 
 		if($this->input->post('provas') != false){
 			array_push($data, array(
-			   'id_aluno' => $aluno ,
-			   'id_disciplina' => $disciplina ,
-			   'id_turma_disciplina' => $turma,
-			   'id_hashtag' => $this->input->post('provas')
-			));
+				'id_aluno' => $aluno ,
+				'id_disciplina' => $disciplina ,
+				'id_turma_disciplina' => $turma,
+				'id_hashtag' => $this->input->post('provas')
+				));
 		} 
 		if($this->input->post('quantidadeConteudo') != false){
 			array_push($data, array(
-			   'id_aluno' => $aluno ,
-			   'id_disciplina' => $disciplina ,
-			   'id_turma_disciplina' => $turma,
-			   'id_hashtag' => $this->input->post('quantidadeConteudo')
-			));
+				'id_aluno' => $aluno ,
+				'id_disciplina' => $disciplina ,
+				'id_turma_disciplina' => $turma,
+				'id_hashtag' => $this->input->post('quantidadeConteudo')
+				));
 		} 
 		
 		$this->disciplinaModel->salvarVotacao($data);

@@ -157,7 +157,7 @@ function avaliarDisciplina(aluno,disciplina,turma){
 		alert( "Request failed: " + textStatus );
 	});
 
-	$('#conteudoAvaliacao').load("http://localhost:8070/CanudosWay/home/votacao/"+aluno+"/"+disciplina+"/"+turma);
+	$('#conteudoAvaliacao').load("http://localhost/CanudosWay/home/votacao/"+aluno+"/"+disciplina+"/"+turma);
 	$('#modalAvaliarDisciplina').modal();
 
 }
