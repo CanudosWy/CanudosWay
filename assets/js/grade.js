@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-
+	
 	$("#diaSemana").multiselect({
 		checkAll: function(){
 			for(i = 1; i <= 6; i++ ){
@@ -20,14 +20,14 @@ $(document).ready(function() {
 			$("input[name='multiselect_professor']").each( function(){
 
 				$('#accordion').find('.ulProfessor' + $(this).val()).show();
-			
+
 			});
 		},
 		uncheckAll: function(){
 			$("input[name='multiselect_professor']").each( function(){
 
 				$('#accordion').find('.ulProfessor' + $(this).val()).hide();
-			
+
 			});
 		}
 	});
@@ -54,9 +54,18 @@ $(document).ready(function() {
 		connectWith: ".dropSegunda,.ulLista1",
 		dropOnEmpty: true,
 		receive: function(event, ui) {
-			var list = $(this);
-			if (list.children().length > 1) {
-				alert("Selecione apenas uma cadeira!");
+			var list = $(this);				
+			
+			if(list.children().attr('situacao') == 'C'){
+				alert("Esta cadeira está com situação 'Cursando'!");
+						// enviar o item para o lugar que estava
+						$(ui.sender).sortable('cancel');
+					}else if(list.children().attr('situacao') == 'A'){
+						alert("Esta cadeira já foi cursada e está com situação 'Aprovado'!");
+						// enviar o item para o lugar que estava
+						$(ui.sender).sortable('cancel');
+					}else if (list.children().length > 1) {
+						alert("Selecione apenas uma cadeira!");
 						// enviar o item para o lugar que estava
 						$(ui.sender).sortable('cancel');
 					}
@@ -81,8 +90,17 @@ $(document).ready(function() {
 		dropOnEmpty: true,
 		receive: function(event, ui) {
 			var list = $(this);
-			if (list.children().length > 1) {
-				alert("Selecione apenas uma cadeira!");
+			
+			if(list.children().attr('situacao') == 'C'){
+				alert("Esta cadeira está com situação 'Cursando'!");
+						// enviar o item para o lugar que estava
+						$(ui.sender).sortable('cancel');
+					}else if(list.children().attr('situacao') == 'A'){
+						alert("Esta cadeira já foi cursada e está com situação 'Aprovado'!");
+						// enviar o item para o lugar que estava
+						$(ui.sender).sortable('cancel');
+					}else if (list.children().length > 1) {
+						alert("Selecione apenas uma cadeira!");
 						// enviar o item para o lugar que estava
 						$(ui.sender).sortable('cancel');
 					}
@@ -94,8 +112,17 @@ $(document).ready(function() {
 		dropOnEmpty: true,
 		receive: function(event, ui) {
 			var list = $(this);
-			if (list.children().length > 1) {
-				alert("Selecione apenas uma cadeira!");
+			
+			if(list.children().attr('situacao') == 'C'){
+				alert("Esta cadeira está com situação 'Cursando'!");
+						// enviar o item para o lugar que estava
+						$(ui.sender).sortable('cancel');
+					}else if(list.children().attr('situacao') == 'A'){
+						alert("Esta cadeira já foi cursada e está com situação 'Aprovado'!");
+						// enviar o item para o lugar que estava
+						$(ui.sender).sortable('cancel');
+					}else if (list.children().length > 1) {
+						alert("Selecione apenas uma cadeira!");
 						// enviar o item para o lugar que estava
 						$(ui.sender).sortable('cancel');
 					}
@@ -107,8 +134,17 @@ $(document).ready(function() {
 		dropOnEmpty: true,
 		receive: function(event, ui) {
 			var list = $(this);
-			if (list.children().length > 1) {
-				alert("Selecione apenas uma cadeira!");
+			
+			if(list.children().attr('situacao') == 'C'){
+				alert("Esta cadeira está com situação 'Cursando'!");
+						// enviar o item para o lugar que estava
+						$(ui.sender).sortable('cancel');
+					}else if(list.children().attr('situacao') == 'A'){
+						alert("Esta cadeira já foi cursada e está com situação 'Aprovado'!");
+						// enviar o item para o lugar que estava
+						$(ui.sender).sortable('cancel');
+					}else if (list.children().length > 1) {
+						alert("Selecione apenas uma cadeira!");
 						// enviar o item para o lugar que estava
 						$(ui.sender).sortable('cancel');
 					}
@@ -120,8 +156,17 @@ $(document).ready(function() {
 		dropOnEmpty: true,
 		receive: function(event, ui) {
 			var list = $(this);
-			if (list.children().length > 1) {
-				alert("Selecione apenas uma cadeira!");
+			
+			if(list.children().attr('situacao') == 'C'){
+				alert("Esta cadeira está com situação 'Cursando'!");
+						// enviar o item para o lugar que estava
+						$(ui.sender).sortable('cancel');
+					}else if(list.children().attr('situacao') == 'A'){
+						alert("Esta cadeira já foi cursada e está com situação 'Aprovado'!");
+						// enviar o item para o lugar que estava
+						$(ui.sender).sortable('cancel');
+					}else if (list.children().length > 1) {
+						alert("Selecione apenas uma cadeira!");
 						// enviar o item para o lugar que estava
 						$(ui.sender).sortable('cancel');
 					}
@@ -132,6 +177,7 @@ $(document).ready(function() {
 	$(".ulListaSegunda,.dropSegunda").disableSelection();
 
 	Filtros();
+	Buttons();
 	
 });
 
@@ -183,8 +229,39 @@ function Filtros(){
 		}
 
 	});
+}
 
+function Buttons(){
 
+	$('#btnSalvarDisciplinas').click(function() {
 
-	
+		if($("#divDisciplinaSalvar .divDisciplinaHolder .divDisciplina").length > 0){
+			var $disciplinas = new Array();
+			$("#divDisciplinaSalvar .divDisciplinaHolder .divDisciplina").each(function( index ) {
+				$disciplinas.push({
+					'id_aluno' : $(this).attr('idAluno'),
+					'id_turma_disciplina' : $(this).attr('idTurmaDisciplina'),
+					'situacao' : $(this).attr('situacao')
+				});					
+
+			});
+
+			var request = $.ajax({
+				url: $('#salvarDisciplinas').val(),
+				type: "POST",
+				data: {'data' : JSON.stringify($disciplinas)},
+				dataType: "JSON"
+			});
+			request.done(function( msg ) {			
+				alert(msg);
+			});
+
+			request.fail(function( jqXHR, textStatus ) {
+				alert( "Erro ao salvar resgistro, tente novamente!");
+			});
+		}else{
+			alert("Informe pelo menos uma disciplina!");	
+		}
+
+	});
 }

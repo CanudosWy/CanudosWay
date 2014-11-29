@@ -73,5 +73,10 @@ class DisciplinaModel extends MainModel {
 		return $query->num_rows();
 		
 	}
+
+	public function salvarDisciplina($dados){
+
+		$this->db->insert_batch('aluno_turma_disciplina', $dados);
+	}
 }
 

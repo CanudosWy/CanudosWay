@@ -14,7 +14,7 @@
 		<span class="tituloSemana">sábado</span>
 	</div>
 	
-	<div class="sessao">
+	<div class="sessao" id="divDisciplinaSalvar">
 		<ul class="divDisciplinaHolder dropSegunda"></ul>
 		<ul class="divDisciplinaHolder dropTerca"></ul>
 		<ul class="divDisciplinaHolder dropQuarta"></ul>
@@ -24,7 +24,8 @@
 	</div>
 	
 	<div class="sessao">
-		<button style="float:right" class="btnPadrao verde borda-verde">Salvar</button>
+		<input id="salvarDisciplinas" value="<?=base_url('disciplina/salvar')?>" type="hidden" />
+		<button id="btnSalvarDisciplinas" style="float:right" class="btnPadrao verde borda-verde">Salvar</button>
 	</div>
 
 	<div class="sessao divFiltroContent">
@@ -41,7 +42,7 @@
 			</select>
 			<label>Professor:</label>
 			<select title="Basic example" id="professor" multiple="multiple" name="example-basic" size="5">
-				<?php 				
+				<?php
 				foreach($dados as $dado){	
 					?>
 					<option selected="selected" value="<?=$dado->id_professor ?>"><?=$dado->nome_professor ?></option>
@@ -76,11 +77,11 @@
 					<?php 				
 					foreach($dados as $dado){						
 						if($dado->semestre == "1"){
-						
+
 							?>
 							<div class="disciplina">
 								<ul class="ulLista ulLista<?=$dado->dia_semana?> ulProfessor<?=$dado->id_professor?>" >
-									<li class="divDisciplina">
+									<li class="divDisciplina" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
@@ -120,7 +121,7 @@
 							?>
 							<div class="disciplina">
 								<ul class="ulLista ulLista<?=$dado->dia_semana?> ulProfessor<?=$dado->id_professor?>">
-									<li class="divDisciplina">
+									<li class="divDisciplina" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
@@ -149,7 +150,7 @@
 							?>
 							<div class="disciplina">
 								<ul class="ulLista ulLista<?=$dado->dia_semana?> ulProfessor<?=$dado->id_professor?>">
-									<li class="divDisciplina">
+									<li class="divDisciplina" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome . "<br>".$dado->situacao?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
@@ -178,7 +179,7 @@
 							?>
 							<div class="disciplina">
 								<ul class="ulLista ulLista<?=$dado->dia_semana?> ulProfessor<?=$dado->id_professor?>">
-									<li class="divDisciplina">
+									<li class="divDisciplina" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
@@ -207,7 +208,7 @@
 							?>
 							<div class="disciplina">
 								<ul class="ulLista ulLista<?=$dado->dia_semana?> ulProfessor<?=$dado->id_professor?>">
-									<li class="divDisciplina">
+									<li class="divDisciplina" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
@@ -236,7 +237,7 @@
 							?>
 							<div class="disciplina">
 								<ul class="ulLista ulLista<?=$dado->dia_semana?> ulProfessor<?=$dado->id_professor?>">
-									<li class="divDisciplina">
+									<li class="divDisciplina" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome. "<br>".$dado->situacao?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						

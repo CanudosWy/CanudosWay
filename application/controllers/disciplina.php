@@ -22,6 +22,28 @@ class Disciplina extends MainController {
 
 	}
 
+	public function salvar(){
+
+		$disciplinas = json_decode($this->input->post('data'));
+		$data = array();
+		foreach ($disciplinas as $key => $value) {	
+			if($value->situacao != "C" || $value->situacao != "A"){	
+
+				array_push($data, array(
+					'id_aluno' => $value->id_aluno,				
+					'id_turma_disciplina' => $value->id_turma_disciplina			
+					));
+
+			}else{
+				echo json_encode($this->data['msg']	=	"Disciplina já cursando/cursada!");
+				break;
+			}
+		}
+
+		$this->disciplinaModel->salvarDisciplina($data);
+		echo json_encode($this->data['msg']	=	"Registro salvo com sucesso!");
+				
+	}
 	
 }
 
