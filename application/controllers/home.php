@@ -32,13 +32,13 @@ class Home extends MainController {
 	}
 	
 	public function grade(){
-	//print_r($this->session->userdata('userid'));die;		
+	$id_user = $this->session->userdata('userid');		
 		$this->data['pagina']			=	'home/grade';
 		$this->data['classe_icone']		=	'ico-grade';
 		$this->data['titulo']			=	'GRADE CURRICULAR';
 		$this->data['sessao']			=	$this->sessao;
 		
-		$this->data['dados']			=	$this->disciplinaModel->grade();
+		$this->data['dados']			=	$this->disciplinaModel->grade($id_user);
 		
 		$this->load->view('template',$this->data);
 	}

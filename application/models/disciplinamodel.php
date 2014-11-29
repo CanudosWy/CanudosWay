@@ -31,7 +31,7 @@ class DisciplinaModel extends MainModel {
 		return $query->result();
 	}
 
-	public function grade(){		
+	public function grade($id_user){		
 
 		$sql = "select *, 
 		p.nome as nome_professor,
@@ -47,7 +47,7 @@ class DisciplinaModel extends MainModel {
 		join turma as t on(td.id_turma = t.id_turma)
 		join cad_turma as ct on(t.id_cad_turma = ct.id_cad_turma)
 		join professor as p on(p.id_professor = td.id_professor)
-		where a.id_aluno = 1";
+		where a.id_aluno = " . $id_user;
 
 		$query = $this->db->query($sql);		
 
