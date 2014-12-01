@@ -13,17 +13,16 @@ class Home extends MainController {
 		$this->sessao				=	"home";
 		$this->campos				=	array('nome_disciplina','semestre','horas');//campos da tabela
 		
+		$newdata = array(
+			'userid'  => '4'
+			);
+		$this->session->set_userdata($newdata);
+		
 		$this->load->model('DisciplinaModel', 'disciplinaModel');
+		
 	}
 	
 	public function index(){
-
-		$newdata = array(
-			'userid'  => '1'
-			);
-
-		$this->session->set_userdata($newdata);
-
 		//passando de valores para a view
 		$this->data['titulo']			=	$this->titulo;
 		$this->data['sessao']			=	$this->sessao;
@@ -32,7 +31,7 @@ class Home extends MainController {
 	}
 	
 	public function grade(){
-	$id_user = $this->session->userdata('userid');		
+		$id_user = $this->session->userdata('userid');		
 		$this->data['pagina']			=	'home/grade';
 		$this->data['classe_icone']		=	'ico-grade';
 		$this->data['titulo']			=	'GRADE CURRICULAR';
@@ -114,6 +113,11 @@ class Home extends MainController {
 		echo json_encode($this->data['msg']	=	"Votação salva com sucesso!");
 		
 		
+	}
+	
+	public function dificuldade($id_disciplina){
+	
+		var_dump($this->disciplinaModel->dificuldade($id_disciplina));
 	}
 	
 }

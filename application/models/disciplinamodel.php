@@ -49,8 +49,8 @@ class DisciplinaModel extends MainModel {
 		join professor as p on(p.id_professor = td.id_professor)
 		where a.id_aluno = " . $id_user;
 
-		$query = $this->db->query($sql);		
-
+		$query = $this->db->query($sql);	
+		
 		return $query->result();
 
 	}
@@ -78,5 +78,26 @@ class DisciplinaModel extends MainModel {
 
 		$this->db->insert_batch('aluno_turma_disciplina', $dados);
 	}
+	
+	public function dificuldade($id_disciplina){
+	
+		$sql = "
+				select sum(peso)/totRegs  total 
+				from(
+					select  SUM(h.peso_hashtag) * h.peso_tema peso, 	(	
+						select count(distinct(id_aluno)) totRegs from disciplina_hashtag dh
+						where dh.id_disciplina = ".$id_disciplina."
+					) totRegs 
+					from disciplina_hashtag dh 
+					inner join hashtag h on (h.id_hashtag = dh.id_hashtag)
+					where dh.id_disciplina = ".$id_disciplina."
+					GROUP BY h.id_hashtag
+				) as subquery";
+				
+		$query = $this->db->query($sql);	
+		
+		return $query->result();
+	}
+	
 }
 
