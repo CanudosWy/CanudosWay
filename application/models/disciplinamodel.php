@@ -54,6 +54,27 @@ class DisciplinaModel extends MainModel {
 		return $query->result();
 
 	}
+
+	public function professor($id_user){		
+
+		$sql = "select distinct(p.id_professor), 
+		p.nome as nome_professor
+		from aluno as a
+		join aluno_curso as ac on(a.id_aluno = ac.id_aluno)
+		join curso as c on(ac.id_curso =  c.id_curso)
+		join curso_disciplina as cd on (c.id_curso = cd.id_curso)
+		join disciplina as d on(cd.id_disciplina = d.id_disciplina)
+		join turma_disciplina as td on(d.id_disciplina = td.id_disciplina)
+		join turma as t on(td.id_turma = t.id_turma)
+		join cad_turma as ct on(t.id_cad_turma = ct.id_cad_turma)
+		join professor as p on(p.id_professor = td.id_professor)
+		where a.id_aluno = " . $id_user;
+
+		$query = $this->db->query($sql);	
+		
+		return $query->result();
+
+	}
 	
 	public function hashtags(){
 		$query = $this->db->get('hashtag');

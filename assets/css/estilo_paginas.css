@@ -60,13 +60,15 @@ a:hover{color:#FFF;text-decoration:none;}
 
 .roxo{background:#6D74BA;}
 .verde{background:#1ABE9C;}
+.green{background:green;}
 .azul{background:#3B82C0;}
+.laranja{background: #F36F21;}
 .verde-escuro{background:#1A7B67;}
 
 .ulLista{width:170px;margin:0 auto;float:left;height:120px;margin:5px;}
 .progress{float:left;width:100%;border-radius:0px;}
 .ulLista li{list-style:none;width:170px;}
-.infoDisciplina{width:20px;height:50%;background:#9473ba;float:right;text-decoration:none;cursor:pointer;}
+.infoDisciplina{width:20px;height:50%;float:right;text-decoration:none;cursor:pointer;}
 .infoDisciplinaIco{width:16px;height:16px;display:block;background:url('../img/exports/ico_info.png') no-repeat; margin:8px auto;}
 
 .avaliarDisciplina{width:20px;height:50%;background:#1BBA9A;float:right;text-decoration:none;cursor:pointer;}

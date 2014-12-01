@@ -1,6 +1,16 @@
 
 $(document).ready(function() {
 
+	$(".ulLista .divDisciplina").each(function( index ) {
+		if($(this).attr('situacao') == "C")	
+			$(this).find('.infoDisciplina').addClass('laranja');
+		else if($(this).attr('situacao') == "A")
+			$(this).find('.infoDisciplina').addClass('azul');
+		else if($(this).attr('situacao') == "NC")
+			$(this).find('.infoDisciplina').addClass('green');	
+		else
+			$(this).find('.infoDisciplina').addClass('green');	
+	});
 	
 	$("#diaSemana").multiselect({
 		checkAll: function(){
@@ -33,11 +43,19 @@ $(document).ready(function() {
 	});
 
 	$("#dificuldade").multiselect({
-		checkAll: function(){
-			alert('All Multiselect items selected!');
+		checkAll: function(){	
+			$("input[name='multiselect_dificuldade']").each( function(){
+
+				$('#accordion').find('.ulDificuldade' + $(this).val()).show();
+
+			});
 		},
 		uncheckAll: function(){
-			alert('All Multiselect items unselected!');
+			$("input[name='multiselect_dificuldade']").each( function(){
+
+				$('#accordion').find('.ulDificuldade' + $(this).val()).hide();
+
+			});
 		}
 	});
 
@@ -229,6 +247,16 @@ function Filtros(){
 		}
 
 	});
+
+	$("input[name='multiselect_dificuldade']").click(function(){ 
+
+		if($(this).is(':checked') == true){			
+			$('#accordion').find('.ulDificuldade' + $(this).val()).show();
+		}else{
+			$('#accordion').find('.ulDificuldade' + $(this).val()).hide();
+		}
+
+	});
 }
 
 function Buttons(){
@@ -252,8 +280,12 @@ function Buttons(){
 				data: {'data' : JSON.stringify($disciplinas)},
 				dataType: "JSON"
 			});
-			request.done(function( msg ) {			
-				alert(msg);
+			request.done(function( object ) {	
+
+				alert(object.msg);
+				if(object.sucess)
+					location.reload();
+
 			});
 
 			request.fail(function( jqXHR, textStatus ) {

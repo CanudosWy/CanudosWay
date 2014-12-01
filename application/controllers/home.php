@@ -14,7 +14,7 @@ class Home extends MainController {
 		$this->campos				=	array('nome_disciplina','semestre','horas');//campos da tabela
 		
 		$newdata = array(
-			'userid'  => '4'
+			'userid'  => '1'
 			);
 		$this->session->set_userdata($newdata);
 		
@@ -38,6 +38,7 @@ class Home extends MainController {
 		$this->data['sessao']			=	$this->sessao;
 		
 		$this->data['dados']			=	$this->disciplinaModel->grade($id_user);
+		$this->data['dadosProfessor']	=	$this->disciplinaModel->professor($id_user);
 		
 		$this->load->view('template',$this->data);
 	}
