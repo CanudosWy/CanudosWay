@@ -80,16 +80,11 @@
 							?>
 							<div class="disciplina">
 								<ul class="ulLista ulLista<?=$dado->dia_semana?> ulProfessor<?=$dado->id_professor?> ulDificuldade<?=$dado->nivel_dificuldade?>" >
-									<li class="divDisciplina" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
+									<li class="divDisciplina liDificuldade<?=$dado->nivel_dificuldade?>" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
 									</li>	
-									<div class="progress" style="height: 10px;">
-										<div  data-toggle="tooltip" data-placement="top" title="Dificuldade" class="progress-bar progress-bar-success" style="width: 100%">
-											<span class="sr-only">100%</span>
-										</div>	
-									</div>						
 								</ul>
 							</div>
 							<?php
@@ -114,7 +109,7 @@
 							?>
 							<div class="disciplina">
 								<ul class="ulLista ulLista<?=$dado->dia_semana?> ulProfessor<?=$dado->id_professor?> ulDificuldade<?=$dado->nivel_dificuldade?>" >
-									<li class="divDisciplina" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
+									<li class="divDisciplina liDificuldade<?=$dado->nivel_dificuldade?>" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
@@ -143,7 +138,7 @@
 							?>
 							<div class="disciplina">
 								<ul class="ulLista ulLista<?=$dado->dia_semana?> ulProfessor<?=$dado->id_professor?> ulDificuldade<?=$dado->nivel_dificuldade?>">
-									<li class="divDisciplina" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
+									<li class="divDisciplina liDificuldade<?=$dado->nivel_dificuldade?>" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
@@ -172,7 +167,7 @@
 							?>
 							<div class="disciplina">
 								<ul class="ulLista ulLista<?=$dado->dia_semana?> ulProfessor<?=$dado->id_professor?> ulDificuldade<?=$dado->nivel_dificuldade?>">
-									<li class="divDisciplina" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
+									<li class="divDisciplina liDificuldade<?=$dado->nivel_dificuldade?>" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
@@ -201,7 +196,7 @@
 							?>
 							<div class="disciplina">
 								<ul class="ulLista ulLista<?=$dado->dia_semana?> ulProfessor<?=$dado->id_professor?> ulDificuldade<?=$dado->nivel_dificuldade?>">
-									<li class="divDisciplina" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
+									<li class="divDisciplina liDificuldade<?=$dado->nivel_dificuldade?>" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
@@ -230,7 +225,7 @@
 							?>
 							<div class="disciplina">
 								<ul class="ulLista ulLista<?=$dado->dia_semana?> ulProfessor<?=$dado->id_professor?> ulDificuldade<?=$dado->nivel_dificuldade?>">
-									<li class="divDisciplina" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
+									<li class="divDisciplina liDificuldade<?=$dado->nivel_dificuldade?>" situacao="<?=$dado->situacao?>" idTurmaDisciplina="<?=$dado->id_turma_disciplina?>" idAluno="<?=$dado->id_aluno?>">
 										<h1><?=$dado->nome_disciplina."<br>".$dado->nome?></h1>
 										<span class="infoDisciplina" onclick="detalhesDisciplina(<?=$dado->id_disciplina?>);"><span class="infoDisciplinaIco"></span></span>						
 										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
