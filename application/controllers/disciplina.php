@@ -41,7 +41,9 @@ class Disciplina extends MainController {
 		}
 
 		$this->disciplinaModel->salvarDisciplina($data);
-		echo json_encode($this->data['msg']	=	"Registro salvo com sucesso!");
+		$this->data['sucess']	= true;
+		$this->data['msg'] = "Registro salvo com sucesso!";
+		echo json_encode($this->data);
 				
 	}
 	
