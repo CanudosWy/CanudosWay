@@ -87,15 +87,9 @@
 										<span class="avaliarDisciplina" onclick="avaliarDisciplina(<?=$dado->id_aluno?>,<?=$dado->id_disciplina?>,<?=$dado->id_turma_disciplina?>)"><span class="avaliarDisciplinaIco"></span></span>						
 									</li>	
 									<div class="progress" style="height: 10px;">
-										<div  data-toggle="tooltip" data-placement="top" title="Dificuldade - Facil - 50%" class="progress-bar progress-bar-success" style="width: 50%">
-											<span class="sr-only">50%</span>
+										<div  data-toggle="tooltip" data-placement="top" title="Dificuldade" class="progress-bar progress-bar-success" style="width: 100%">
+											<span class="sr-only">100%</span>
 										</div>	
-										<div data-toggle="tooltip" data-placement="top" title="Dificuldade - Médio - 25%" class="progress-bar progress-bar-warning" style="width: 25%">
-											<span class="sr-only">25%</span>
-										</div>								
-										<div data-toggle="tooltip" data-placement="top" title=" Dificuldade - Difícil - 25%" class="progress-bar progress-bar-danger" style="width: 25%">
-											<span class="sr-only">25%</span>
-										</div>
 									</div>						
 								</ul>
 							</div>
